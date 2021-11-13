@@ -145,7 +145,7 @@ body[data-layout-mode=dark] .layout-mode-light {
 }
 
 .page-content {
-    padding: calc(70px + 20px) calc(20px / 2) 60px calc(20px / 2)
+    padding: 20px;
 }
 
 .header-item {
