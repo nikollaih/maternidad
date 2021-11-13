@@ -7,9 +7,16 @@
                 <li class="menu-title" data-key="t-menu">Menú</li>
                 <!-- Invitados -->
                 <li>
-                    <a href="<?= base_url() ?>Invitados/aplicativos">
+                    <a href="<?= base_url() ?>">
                         <i class="fas fa-cogs"></i>
                         <span data-key="t-dashboard">Configuraciones</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="<?= base_url() ?>Registro/datos_basicos">
+                        <i class="fas fa-users"></i>
+                        <span data-key="t-dashboard">Gestionar Pacientes</span>
                     </a>
                 </li>
                 <!-- Invitados -->
