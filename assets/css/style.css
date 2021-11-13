@@ -13,13 +13,25 @@
     text-align: center;
 }
 
-.custom-radius{
+.custom-radius {
     border-radius: 10px;
     overflow: hidden;
 }
+
 .main-content {
     margin-top: 100px;
 }
+
 .main-content ul {
     padding: 0 10px;
+}
+
+select.form-control {
+    appearance: auto;
+}
+
+.form-view .card-header {
+    background-color: #5a5a5a;
+    color: #fff;
+    font-weight: bold;
 }
