@@ -13,6 +13,16 @@
                     </a>
                 </li>
 
+                <li class="">
+                    <a href="javascript: void(0);" class="has-arrow" aria-expanded="false">
+                    <i class="fas fa-cogs"></i>
+                        <span data-key="t-authentication">Configuraciones</span>
+                    </a>
+                    <ul class="sub-menu mm-collapse" aria-expanded="false" style="height: 0px;">
+                        <li><a href="<?= base_url() ?>TipoDocumento/config" data-key="t-login">Tipos de documentos</a></li>
+                    </ul>
+                </li>
+
                 <li>
                     <a href="<?= base_url() ?>Registro/datos_basicos">
                         <i class="fas fa-users"></i>
