@@ -101,7 +101,7 @@
                            <!-- Text input -->
                            <div class="form-outline mb-4">
                               <label class="form-label" for="form6Example3">Edad</label>
-                              <input type="number" id="form6Example3" class="form-control" />
+                              <input type="text" id="form6Example3" class="form-control" />
                            </div>
                         </div>
                      </div>
