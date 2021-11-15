@@ -4625,7 +4625,7 @@ fieldset:disabled .btn {
 
 .nav-link:focus,
 .nav-link:hover {
-    color: #414598;
+    color: #2e9177;
     text-decoration: none
 }
 
@@ -4681,7 +4681,7 @@ fieldset:disabled .btn {
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
     color: #fff;
-    background-color: #5156be
+    background-color: #268068;
 }
 
 .nav-fill .nav-item,

@@ -19,7 +19,12 @@
                         <span data-key="t-authentication">Configuraciones</span>
                     </a>
                     <ul class="sub-menu mm-collapse" aria-expanded="false" style="height: 0px;">
-                        <li><a href="<?= base_url() ?>TipoDocumento/config" data-key="t-login">Tipos de documentos</a></li>
+                        <li>
+                            <a href="<?= base_url() ?>Configuracion/tipoDocumento" data-key="t-login">Tipos de documentos</a>
+                        </li>
+                        <li>
+                            <a href="<?= base_url() ?>Configuracion/ciudades" data-key="t-login">Ciudades</a>
+                        </li>
                     </ul>
                 </li>
 
