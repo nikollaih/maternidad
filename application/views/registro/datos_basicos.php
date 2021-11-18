@@ -1,6 +1,6 @@
 <div class="page-content form-view">
    <div class="container-fluid">
-      <div class="row">
+      <div class="row align-items-end">
          <div class="col-12">
             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
                <h4 class="mb-sm-0 font-size-18"><?= $subtitle ?></h4>
@@ -13,13 +13,13 @@
             </div>
          </div>
       </div>
-      <div class="row">
-         <div class="col-md-6">
+      <div class="row align-items-end">
+         <div class="col-md-12">
             <div class="card">
                <div class="card-header">Datos personales</div>
                <div class="card-body">
                   <form>
-                     <div class="row mb-4">
+                     <div class="row align-items-end mb-4">
                         <div class="col">
                            <div class="form-outline">
                               <label class="form-label" for="form6Example1">Tipo de documento</label>
@@ -43,7 +43,7 @@
                         </div>
                      </div>
                      <!-- 2 column grid layout with text inputs for the first and last names -->
-                     <div class="row mb-4">
+                     <div class="row align-items-end mb-4">
                         <div class="col">
                            <div class="form-outline">
                               <label class="form-label" for="form6Example1">Nombres</label>
@@ -57,7 +57,7 @@
                            </div>
                         </div>
                      </div>
-                     <div class="row mb-4">
+                     <div class="row align-items-end mb-4">
                         <div class="col">
                            <div class="form-outline">
                               <label class="form-label" for="form6Example1">Sexo</label>
@@ -89,7 +89,7 @@
                            </div>
                         </div>
                      </div>
-                     <div class="row">
+                     <div class="row align-items-end mb-4">
                         <div class="col">
                            <div class="form-outline">
                               <label class="form-label" for="form6Example1">Fecha de nacimiento</label>
@@ -99,13 +99,13 @@
                         <div class="col">
                            <!-- Text input -->
                            <!-- Text input -->
-                           <div class="form-outline mb-4">
+                           <div class="form-outline">
                               <label class="form-label" for="form6Example3">Edad</label>
                               <input type="number" id="form6Example3" class="form-control" />
                            </div>
                         </div>
                      </div>
-                     <div class="row mb-4">
+                     <div class="row align-items-end mb-4">
                         <div class="col">
                            <!-- Text input -->
                            <div class="form-outline mb-4">
@@ -120,21 +120,17 @@
                            </div>
                         </div>
                      </div>
-                     <!-- Email input -->
-                     <!-- Checkbox -->
-                     <!-- Submit button -->
-                     <button type="submit" class="btn btn-primary btn-block mb-4">Continuar</button>
                   </form>
                </div>
             </div>
          </div>
-         <div class="col-md-6">
-            <div class="row">
+         <div class="col-md-12">
+            <div class="row align-items-end">
                <div class="col-md-12">
                   <div class="card">
                      <div class="card-header">Ubicación</div>
                      <div class="card-body">
-                        <div class="row mb-4">
+                        <div class="row align-items-end mb-4">
                            <div class="col">
                               <div class="form-outline">
                                  <label class="form-label" for="form6Example1">Departamento</label>
@@ -185,12 +181,12 @@
                   </div>
                </div>
             </div>
-            <div class="row">
+            <div class="row align-items-end">
                <div class="col-md-12">
                   <div class="card">
                      <div class="card-header">Otros datos</div>
                      <div class="card-body">
-                        <div class="row mb-4">
+                        <div class="row align-items-end mb-4">
                            <div class="col">
                               <div class="form-outline">
                                  <label class="form-label" for="form6Example1">Tipo de población beneficiaria</label>
@@ -237,7 +233,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="row mb-4">
+                        <div class="row align-items-end mb-4">
                            <div class="col">
                               <div class="form-outline">
                                  <label class="form-label" for="form6Example1">Nivel educativo</label>
