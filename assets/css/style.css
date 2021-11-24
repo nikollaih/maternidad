@@ -29,9 +29,11 @@
 select.form-control {
     appearance: auto;
 }
-
-.form-view .card-header {
-    background-color: #5a5a5a;
-    color: #fff;
-    font-weight: bold;
+.tag{
+    text-align: center;
+    padding: 5px;
+    background: #e9e9ef;
+    border-radius: 0.25rem;
+    display: block;
+    min-width: 100px;
 }

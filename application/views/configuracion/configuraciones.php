@@ -16,7 +16,7 @@
       <div class="row">
          <div class="col-md-12">
             <div class="card">
-               <div class="card-header">Crear <?= $subtitle ?></div>
+               <div class="card-header bg-transparent border-bottom">Crear <?= $subtitle ?></div>
                <div class="card-body">
                   <form method="POST" action="<?=base_url()?>Configuracion/insertar">
                      <!-- 2 column grid layout with text inputs for the first and last names -->
