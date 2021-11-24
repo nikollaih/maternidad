@@ -1,6 +1,6 @@
 <div class="page-content form-view">
    <div class="container-fluid">
-      <div class="row">
+      <div class="row align-items-end">
          <div class="col-12">
             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
                <h4 class="mb-sm-0 font-size-18"><?= $subtitle ?></h4>
@@ -13,13 +13,13 @@
             </div>
          </div>
       </div>
-      <div class="row">
-         <div class="col-md-6">
+      <div class="row align-items-end mb-4">
+         <div class="col-md-12">
             <div class="card">
                <div class="card-header">INTERRUPCION VOLUNTARIA DEL EMBARAZO</div>
                <div class="card-body">
                   <form>
-                     <div class="row mb-4">
+                     <div class="row align-items-end">
                         <div class="col">
                            <div class="form-outline">
                               <label class="form-label" for="form6Example1">Dimensión</label>
@@ -54,12 +54,12 @@
                   </form>
                </div>
             </div>
-            <div class="row">
+            <div class="row align-items-end mb-4">
                <div class="col-md-12">
                   <div class="card">
                      <div class="card-header">ATENCION DEL RECIEN NACIDO</div>
                      <div class="card-body">
-                        <div class="row mb-4">
+                        <div class="row align-items-end mb-4 mb-4">
                            <div class="col">
                               <div class="form-outline">
                                  <label class="form-label" for="form6Example1">Sexo</label>
@@ -76,73 +76,73 @@
                               </div>
                            </div>
                            <div class="col">
-                              <div class="form-outline mb-4">
+                              <div class="form-outline">
                                  <label class="form-label" for="form6Example1">Peso</label>
                                  <input type="text" id="form6Example1" class="form-control" />
                               </div>
                            </div>
                            <div class="col">
-                              <div class="form-outline mb-4">
+                              <div class="form-outline">
                                  <label class="form-label" for="form6Example1">Talla</label>
                                  <input type="text" id="form6Example1" class="form-control" />
                               </div>
                            </div>
                         </div>
-                        <div class="row mb-4">
+                        <div class="row align-items-end mb-4">
                            <div class="col">
-                              <div class="form-outline mb-4">
+                              <div class="form-outline">
                                  <label class="form-label" for="form6Example1">Vacunas aplicadas al recien nacido(Bcg, hepatitis b)o</label>
                                  <input type="text" id="form6Example1" class="form-control" />
                               </div>
                            </div>
                            <div class="col">
-                              <div class="form-outline mb-4">
+                              <div class="form-outline">
                                  <label class="form-label" for="form6Example1">Perimetro torácico - Perímetro abdominal</label>
                                  <input type="text" id="form6Example1" class="form-control" />
                               </div>
                            </div>
                            <div class="col">
-                              <div class="form-outline mb-4">
+                              <div class="form-outline">
                                  <label class="form-label" for="form6Example1">Tiempo pinzamiento del cordon umbilical para h.i.v</label>
                                  <input type="text" id="form6Example1" class="form-control" />
                               </div>
                            </div>
                         </div>
-                        <div class="row mb-4">
+                        <div class="row align-items-end mb-4">
                            <div class="col">
-                              <div class="form-outline mb-4">
+                              <div class="form-outline">
                                  <label class="form-label" for="form6Example1">Apagar a los 5 minutos</label>
                                  <input type="text" id="form6Example1" class="form-control" />
                               </div>
                            </div>
                            <div class="col">
-                              <div class="form-outline mb-4">
+                              <div class="form-outline">
                                  <label class="form-label" for="form6Example1">Apagar a los 10 minutos</label>
                                  <input type="text" id="form6Example1" class="form-control" />
                               </div>
                            </div>
                            <div class="col">
-                              <div class="form-outline mb-4">
+                              <div class="form-outline">
                                  <label class="form-label" for="form6Example1">Perimetro cefalic</label>
                                  <input type="text" id="form6Example1" class="form-control" />
                               </div>
                            </div>
                         </div>
-                        <div class="row">
+                        <div class="row align-items-end">
                            <div class="col">
-                              <div class="form-outline mb-4">
+                              <div class="form-outline">
                                  <label class="form-label" for="form6Example1">Fecha reporte tsh</label>
                                  <input type="date" id="form6Example1" class="form-control" />
                               </div>
                            </div>
                            <div class="col">
-                              <div class="form-outline mb-4">
+                              <div class="form-outline">
                                  <label class="form-label" for="form6Example1">Reporte tsh</label>
                                  <input type="text" id="form6Example1" class="form-control" />
                               </div>
                            </div>
                            <div class="col">
-                              <div class="form-outline mb-4">
+                              <div class="form-outline">
                                  <label class="form-label" for="form6Example1">Fecha control recien nacido</label>
                                  <input type="date" id="form6Example1" class="form-control" />
                               </div>
@@ -153,13 +153,13 @@
                </div>
             </div>
          </div>
-         <div class="col-md-6">
-            <div class="row">
+         <div class="col-md-12">
+            <div class="row align-items-end mb-4">
                <div class="col-md-12">
                   <div class="card">
                      <div class="card-header">ATENCION DEL PARTO</div>
                      <div class="card-body">
-                        <div class="row mb-4">
+                        <div class="row align-items-end mb-4 mb-4">
                            <div class="col">
                               <div class="form-outline">
                                  <label class="form-label" for="form6Example1">Forma de Terminación del Embarazo</label>
@@ -182,11 +182,15 @@
                               </div>
                            </div>
                         </div>
-                        <div class="form-outline mb-4">
+                        <div class="row align-items-end">
+                           <div class="col">
+                           <div class="form-outline">
                            <label class="form-label" for="form6Example1">Ips que atendió el parto(nivel primario, complementario)</label>
                            <input type="text" id="form6Example1" class="form-control" />
                         </div>
-                        <div class="form-outline">
+                           </div>
+                           <div class="col">
+                           <div class="form-outline">
                            <label class="form-label" for="form6Example1">Suministro del método de planificación familiar post evento obstétrico (Antes del alta)</label>
                            <select class="select form-control">
                               <option value="1">One</option>
@@ -199,44 +203,46 @@
                               <option value="8">Eight</option>
                            </select>
                         </div>
+                           </div>
+                        </div>
                      </div>
                   </div>
                </div>
             </div>
-            <div class="row">
+            <div class="row align-items-end mb-4">
                <div class="col-md-12">
                   <div class="card">
                      <div class="card-header">CONTROL DEL RECIEN NACIDO Y LA MADRE</div>
                      <div class="card-body">
-                        <div class="row mb-4">
+                        <div class="row align-items-end mb-4 mb-4">
                            <div class="col">
-                              <div class="form-outline mb-4">
+                              <div class="form-outline">
                                  <label class="form-label" for="form6Example1">Fecha salida del binomio madre e hijo</label>
                                  <input type="text" id="form6Example1" class="form-control" />
                               </div>
                            </div>
                            <div class="col">
-                              <div class="form-outline mb-4">
+                              <div class="form-outline">
                                  <label class="form-label" for="form6Example1">Fecha de consejería en Lactancia Materna</label>
                                  <input type="text" id="form6Example1" class="form-control" />
                               </div>
                            </div>
                            <div class="col">
-                              <div class="form-outline mb-4">
+                              <div class="form-outline">
                                  <label class="form-label" for="form6Example1">Inicio de lactancia materna intraparto</label>
                                  <input type="text" id="form6Example1" class="form-control" />
                               </div>
                            </div>
                         </div>
-                        <div class="row">
+                        <div class="row align-items-end">
                            <div class="col">
-                              <div class="form-outline mb-4">
+                              <div class="form-outline">
                                  <label class="form-label" for="form6Example1">Fecha de atención del puerperio inmediato </label>
                                  <input type="date" id="form6Example1" class="form-control" />
                               </div>
                            </div>
                            <div class="col">
-                              <div class="form-outline mb-4">
+                              <div class="form-outline">
                                  <label class="form-label" for="form6Example1">Fecha de consulta de planificación familiar post parto</label>
                                  <input type="text" id="form6Example1" class="form-control" />
                               </div>

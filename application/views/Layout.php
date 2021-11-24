@@ -15,7 +15,6 @@
             <div class="main-content">
                 <?= $view ?>
                 <!-- End Page-content -->
-                <?php $this->load->view("templates/footer") ?>
             </div>
             <!-- end main content-->
         </div>

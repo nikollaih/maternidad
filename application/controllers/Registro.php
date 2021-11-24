@@ -6,7 +6,6 @@ class Registro extends Application_Controller {
 	{
 		parent::__construct();
 		$this->load->helper(["url"]);
-        $this->load->model(["Asignaciones_Model"]);
 	}
 
 	public function datos_basicos(){
