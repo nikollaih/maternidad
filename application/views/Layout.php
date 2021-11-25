@@ -1,11 +1,5 @@
 <!doctype html>
 <html lang="en">
-    
-    
-    
-    
-    
-    
     <?php $this->load->view("templates/head") ?>
     <body data-sidebar-size="lg" data-topbar="dark">
     <!-- <body data-layout="horizontal"> -->
