@@ -1,3 +1,11 @@
+html {
+    background: #fbfaff;
+}
+
+.vertical-menu {
+    background-color: #fff !important;
+}
+
 .radius-10 {
     border-radius: 10px;
 }
@@ -19,7 +27,9 @@
 }
 
 .main-content {
-    margin-top: 100px;
+    margin-top: 70px;
+    padding-top: 30px;
+    background: #fbfaff;
 }
 
 .main-content ul {
@@ -29,11 +39,22 @@
 select.form-control {
     appearance: auto;
 }
-.tag{
+
+.tag {
     text-align: center;
     padding: 5px;
     background: #e9e9ef;
     border-radius: 0.25rem;
     display: block;
     min-width: 100px;
+}
+
+.card {
+    border-radius: 10px !important;
+    overflow: hidden !important;
+}
+
+.card-header {
+    color: #fff;
+    background-color: #09425A !important;
 }
