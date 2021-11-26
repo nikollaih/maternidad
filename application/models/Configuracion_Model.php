@@ -27,7 +27,7 @@ Class Configuracion_Model extends CI_Model {
     public function update($data){
         $this->db->where('codigo', $data['codigo']);
         $this->db->update('cfg_tipodoc', $data);
-        return $this->get();
+        return $this->get("cfg_tipodoc");
     }
 
     // Delete a document type
