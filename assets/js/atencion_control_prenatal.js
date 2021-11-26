@@ -1,12 +1,23 @@
 jQuery(document).on("click", ".delete-formula-obstetrica", function() {
     let id = jQuery(this).attr("data-id");
-    delete_formula_obstetrica(id);
+    delete_row(id, "Atencion_Control_Prenatal/delete_formula_obstetrica", "La fórmula obstétrica eliminada!");
 });
 
-function delete_formula_obstetrica(id) {
+jQuery(document).on("click", ".delete-sustancia-psicoactiva", function() {
+    let id = jQuery(this).attr("data-id");
+    delete_row(id, "Atencion_Control_Prenatal/delete_sustancias_psicoactivas", 'El registro será eliminado!');
+});
+
+jQuery(document).on("click", ".delete-vacunacion", function() {
+    let id = jQuery(this).attr("data-id");
+    delete_row(id, "Atencion_Control_Prenatal/delete_vacunacion", 'La vacuna será eliminada!');
+});
+
+
+function delete_row(id, url, text) {
     swal({
             title: '¿Estás seguro?',
-            text: 'La fórmula obstétrica eliminada!',
+            text: text,
             type: 'warning',
             showCancelButton: true,
             confirmButtonText: 'Si, Eliminar!',
@@ -14,9 +25,8 @@ function delete_formula_obstetrica(id) {
             showLoaderOnConfirm: true
         },
         function() {
-            jQuery.post(base_url + "Atencion_Control_Prenatal/delete_formula_obstetrica", { id: id },
+            jQuery.post(base_url + url, { id: id },
                 function(data) {
-                    console.log(data)
                     if (data.status) {
                         swal({
                                 title: 'Eliminado',
