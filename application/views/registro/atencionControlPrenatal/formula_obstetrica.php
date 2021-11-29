@@ -52,7 +52,7 @@
                   </div>
                </div>
                <div class="row align-items-end">
-                  <div class="col align-self-end">
+                  <div class="col text-end">
                      <button class="btn btn-primary">Guardar</button>
                   </div>
                </div>
@@ -94,7 +94,7 @@
                            <td><?= $formula["vivos"] ?></td>
                            <td><?= $formula["interginesico"] ?></td>
                            <td><?= date("d M, Y h:i a", strtotime($formula["created_at"])) ?></td>
-                           <td><button data-id="<?= $formula["id_formula_obstetrica"] ?>" class="btn btn-sm btn-danger delete-formula-obstetrica">Eliminar</button></td>
+                           <td class="text-center"><button data-id="<?= $formula["id_formula_obstetrica"] ?>" class="btn btn-sm btn-danger delete-formula-obstetrica">Eliminar</button></td>
                         </tr>
                   <?php
                         }

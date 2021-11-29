@@ -30,6 +30,8 @@
         <script src="<?= base_url() ?>/assets/libs/feather-icons/feather.min.js"></script>
         <!-- pace js -->
         <script src="<?= base_url() ?>/assets/libs/pace-js/pace.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.js" integrity="sha512-CWVDkca3f3uAWgDNVzW+W4XJbiC3CH84P2aWZXj+DqI6PNbTzXbl1dIzEHeNJpYSn4B6U8miSZb/hCws7FnUZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="<?= base_url() ?>/assets/js/app.js"></script>
         <script src="<?= base_url() ?>/assets/js/general.js"></script>
         <script src="<?= base_url() ?>/assets/js/atencion_control_prenatal.js"></script>

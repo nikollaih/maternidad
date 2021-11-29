@@ -11,4 +11,10 @@ class Inicio extends Application_Controller {
 	public function index(){
 		$this->load_layout("generales/index");
 	}
+
+	public function pacientes(){
+		$params["title"] = "Inicio";
+        $params["subtitle"] = "Pacientes";
+		$this->load_layout("generales/pacientes", $params);
+	}
 }
