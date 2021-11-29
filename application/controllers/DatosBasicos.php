@@ -26,6 +26,9 @@ class DatosBasicos extends Application_Controller {
             // }
 
             $form_params["id_paciente"] = $paciente;
+            $form_params["tipo_doc"] = $this->Configuracion_Model->get('cfg_tipodoc');
+            $form_params["sexos"] = $this->Configuracion_Model->get('cfg_sexo');
+            $form_params["generos"] = $this->Configuracion_Model->get('cfg_genero');
             $params["formulario"] = $this->load->view("registro/datosBasicos/datos_personales", $form_params, TRUE);
             $this->load_layout("registro/datosBasicos/template", $params);
         }

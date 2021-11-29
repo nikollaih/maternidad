@@ -9,14 +9,13 @@
                 <div class="form-outline">
                     <label class="form-label" for="form6Example1">Tipo de documento</label>
                     <select class="select form-control">
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                        <option value="4">Four</option>
-                        <option value="5">Five</option>
-                        <option value="6">Six</option>
-                        <option value="7">Seven</option>
-                        <option value="8">Eight</option>
+                        <?php
+                            for ($i=0; $i < count($tipo_doc); $i++) { 
+                        ?>
+                        <option value="<?=$tipo_doc[$i]['codigo']?>"><?=$tipo_doc[$i]['descripcion']?></option>
+                        <?php
+                            }
+                        ?>
                     </select>
                 </div>
             </div>
@@ -47,14 +46,13 @@
                 <div class="form-outline">
                     <label class="form-label" for="form6Example1">Sexo</label>
                     <select class="select form-control">
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                        <option value="4">Four</option>
-                        <option value="5">Five</option>
-                        <option value="6">Six</option>
-                        <option value="7">Seven</option>
-                        <option value="8">Eight</option>
+                        <?php
+                            for ($a=0; $a < count($sexos); $a++) { 
+                        ?>
+                        <option value="<?=$sexos[$a]['codigo']?>"><?=$sexos[$a]['descripcion']?></option>
+                        <?php
+                            }
+                        ?>
                     </select>
                 </div>
             </div>
@@ -62,14 +60,13 @@
                 <div class="form-outline">
                     <label class="form-label" for="form6Example1">Genero</label>
                     <select class="select form-control">
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                        <option value="4">Four</option>
-                        <option value="5">Five</option>
-                        <option value="6">Six</option>
-                        <option value="7">Seven</option>
-                        <option value="8">Eight</option>
+                        <?php
+                            for ($a=0; $a < count($generos); $a++) { 
+                        ?>
+                        <option value="<?=$generos[$a]['codigo']?>"><?=$generos[$a]['descripcion']?></option>
+                        <?php
+                            }
+                        ?>
                     </select>
                 </div>
             </div>
