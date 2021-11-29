@@ -58,3 +58,16 @@ select.form-control {
     color: #fff;
     background-color: #09425A !important;
 }
+
+.navbar.perfil-menu {
+    padding: 15px 0px;
+    border-radius: 10px;
+}
+
+.navbar.perfil-menu .nav-item {
+    padding: 0px 15px;
+}
+
+.navbar.perfil-menu .nav-item {
+    font-weight: bold;
+}

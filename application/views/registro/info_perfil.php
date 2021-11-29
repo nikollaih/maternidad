@@ -1,12 +1,12 @@
 <div class="col-md-12">
-    <div class="card">
+    <div class="card" style="overflow: visible !important;">
         <div class="card-body">
-            <div class="row">
+            <div class="row mb-4">
                 <div class="col-sm order-2 order-sm-1">
                     <div class="d-flex align-items-start mt-3 mt-sm-0">
                     <div class="flex-shrink-0">
                         <div class="avatar-xl me-3">
-                            <img src="https://lorempixel.com/200/200/" alt="" class="img-fluid rounded-circle d-block">
+                            <img src="<?= base_url() ?>assets/images/avatar.png" alt="" class="img-fluid rounded-circle d-block">
                         </div>
                     </div>
                     <div class="flex-grow-1">
@@ -26,6 +26,11 @@
                         <span class="tag">EPS</span>
                     </div>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <?php $this->load->view("registro/menu_registro") ?>
                 </div>
             </div>
         </div>
