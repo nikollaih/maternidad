@@ -20,6 +20,15 @@
       </div>
       <div class="row">
          <div class="col-md-12" style="padding-left:0;">
+            <?php
+               if(isset($message)){
+            ?>
+               <div class="alert alert-<?= $message["type"] ?> alert-dismissible fade show" role="alert">
+               <?= $message["message"] ?>
+               </div>
+            <?php
+               }
+            ?>
             <div>
                <div id="personales">
                   <?= $formulario ?>

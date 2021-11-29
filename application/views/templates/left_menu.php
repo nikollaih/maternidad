@@ -83,13 +83,6 @@
                 </li>
 
                 <li>
-                    <a href="<?= base_url() ?>Registro/datos_basicos">
-                        <i class="fas fa-users"></i>
-                        <span data-key="t-dashboard">Gestionar Pacientes</span>
-                    </a>
-                </li>
-
-                <li>
                     <a href="<?= base_url() ?>Estadisticas">
                         <i class="fas fa-chart-pie"></i>
                         <span data-key="t-dashboard">Estadisticas</span>
