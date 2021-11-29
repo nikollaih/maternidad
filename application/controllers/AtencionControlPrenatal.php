@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Atencion_Control_Prenatal extends Application_Controller {
+class AtencionControlPrenatal extends Application_Controller {
     function __construct()
 	{
 		parent::__construct();
@@ -14,7 +14,7 @@ class Atencion_Control_Prenatal extends Application_Controller {
     =========================== FORMULA OBSTETRICA =============================
     ===========================================================================*/
 
-	function formula_obstetrica($paciente = null){
+	function formulaObstetrica($paciente = null){
         if($paciente){
             $params["title"] = "Atencion Control Prenatal";
             $params["subtitle"] = "Formula Obstétrica";
@@ -99,7 +99,7 @@ class Atencion_Control_Prenatal extends Application_Controller {
     ======================== SUSTANCIAS PSICOACTIVAS ==========================
     ===========================================================================*/
 
-	function sustancias_psicoactivas($paciente = null){
+	function sustanciasPsicoactivas($paciente = null){
         if($paciente){
             $params["title"] = "Atencion Control Prenatal";
             $params["subtitle"] = "Sustancias Psicoactivas";
