@@ -9,9 +9,9 @@
                     1. Datos básicos <i class="mdi mdi-chevron-down"></i>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                <a class="dropdown-item" href="<?= base_url() ?>DatosBasicos/personales/1">Información personal</a>
+                    <a class="dropdown-item" href="<?= base_url() ?>DatosBasicos/ubicacion/1">Información de ubicación</a>
+                    <a class="dropdown-item" href="<?= base_url() ?>DatosBasicos/otros/1">Otros datos</a>
                 </div>
             </li>
             <li class="nav-item dropdown">

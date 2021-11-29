@@ -37,7 +37,7 @@ class DatosBasicos extends Application_Controller {
 	public function ubicacion($paciente = null){
 		if($paciente){
             $params["title"] = "Datos básicos";
-            $params["subtitle"] = "Información personal";
+            $params["subtitle"] = "Información de ubicación";
 
             // if($this->input->post()){
             //     $data = $this->input->post();
