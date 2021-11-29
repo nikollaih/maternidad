@@ -13,7 +13,12 @@
             </div>
          </div>
       </div>
-      <div class="row align-items-end">
+      <div class="row">
+         <?php
+            $this->load->view('registro/info_perfil');
+         ?>
+      </div>
+      <div class="row">
          <?php
             if(isset($message)){
          ?>
@@ -23,7 +28,9 @@
          <?php
             }
          ?>
-         <?= $formulario ?>
+         <div class="col-md-12">
+            <?= $formulario ?>
+         </div>
       </div>
    </div>
    <!-- container-fluid -->
