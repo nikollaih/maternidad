@@ -3,7 +3,7 @@
         Información personal
     </div>
     <div class="card-body">
-        <form>
+        <form action="" method="post">
             <div class="row align-items-end mb-4">
             <div class="col">
                 <div class="form-outline">
@@ -104,6 +104,11 @@
                     <input type="email" id="form6Example5" class="form-control" />
                 </div>
             </div>
+            </div>
+            <div class="row align-items-end">
+                <div class="col text-end">
+                    <button class="btn btn-primary">Guardar</button>
+                </div>
             </div>
         </form>
     </div>
