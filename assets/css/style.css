@@ -1,3 +1,11 @@
+html {
+    background: #fbfaff;
+}
+
+.vertical-menu {
+    background-color: #fff !important;
+}
+
 .radius-10 {
     border-radius: 10px;
 }
@@ -19,7 +27,9 @@
 }
 
 .main-content {
-    margin-top: 100px;
+    margin-top: 70px;
+    padding-top: 30px;
+    background: #fbfaff;
 }
 
 .main-content ul {
@@ -30,8 +40,34 @@ select.form-control {
     appearance: auto;
 }
 
-.form-view .card-header {
-    background-color: #5a5a5a;
+.tag {
+    text-align: center;
+    padding: 5px;
+    background: #e9e9ef;
+    border-radius: 0.25rem;
+    display: block;
+    min-width: 100px;
+}
+
+.card {
+    border-radius: 10px !important;
+    overflow: hidden !important;
+}
+
+.card-header {
     color: #fff;
+    background-color: #09425A !important;
+}
+
+.navbar.perfil-menu {
+    padding: 15px 0px;
+    border-radius: 10px;
+}
+
+.navbar.perfil-menu .nav-item {
+    padding: 0px 15px;
+}
+
+.navbar.perfil-menu .nav-item {
     font-weight: bold;
 }

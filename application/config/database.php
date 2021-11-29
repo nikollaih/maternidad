@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => 'root',
+	'hostname' => '92.205.0.161',
+	'username' => 'redesystem_datab',
+	'password' => '66RH9}66YWvp',
 	'database' => 'maternidad',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
