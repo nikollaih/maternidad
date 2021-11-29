@@ -7,9 +7,9 @@
                 <li class="menu-title" data-key="t-menu">Menú</li>
                 <!-- Invitados -->
                 <li>
-                    <a href="<?= base_url() ?>">
+                    <a href="<?= base_url() ?>/Inicio/pacientes">
                         <i class="fas fa-tachometer-alt"></i>
-                        <span data-key="t-dashboard">Tablero</span>
+                        <span data-key="t-dashboard">Inicio</span>
                     </a>
                 </li>
 
@@ -88,6 +88,14 @@
                         <span data-key="t-dashboard">Gestionar Pacientes</span>
                     </a>
                 </li>
+
+                <li>
+                    <a href="<?= base_url() ?>Estadisticas">
+                        <i class="fas fa-chart-pie"></i>
+                        <span data-key="t-dashboard">Estadisticas</span>
+                    </a>
+                </li>
+
                 <!-- Invitados -->
             </ul>
         </div>
