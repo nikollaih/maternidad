@@ -4,6 +4,7 @@
     </div>
     <div class="card-body">
         <form action="" method="post">
+            <input type="hidden" value="<?=$id_paciente?>" id="id" name="id">
             <div class="row align-items-end mb-4">
             <div class="col">
                 <div class="form-outline">

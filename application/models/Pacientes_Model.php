@@ -63,5 +63,12 @@ Class Pacientes_Model extends CI_Model {
         $result = $this->db->get();
         return ($result->num_rows() > 0) ? $result->result_array() : false;
     }
+
+    public function actualizar($data) {
+        $id = $data['id'];
+        unset($data['id']);
+        $this->db->where('id', $id);
+        return $this->db->update('datos_basicos', $data);
+    }
 }
 ?>
