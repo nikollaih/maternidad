@@ -19,7 +19,7 @@
          ?>
       </div>
       <div class="row">
-         <div class="col-md-12" style="padding-left:0;">
+         <div class="col-md-12">
             <?php
                if(isset($message)){
             ?>

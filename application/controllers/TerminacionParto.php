@@ -33,6 +33,7 @@ class TerminacionParto extends Application_Controller {
             $form_params["tipo_causales"] = $this->Configuracion_Model->get("cfg_voluntaria_causa");
             $form_params["tipo_dimensiones"] = $this->Configuracion_Model->get("cfg_voluntaria_dimension");
             $params["formulario"] = $this->load->view("registro/terminacionParto/interrupcion_voluntaria", $form_params, TRUE);
+            $params['info_perfil'] = $this->Pacientes_Model->getProfile($paciente);
             $this->load_layout("registro/atencionControlPrenatal/template", $params);
         }
         else{
@@ -113,6 +114,7 @@ class TerminacionParto extends Application_Controller {
             $form_params["recien_nacido"] = $this->Recien_Nacido_Model->get_all($paciente);
             $form_params["tipo_sexo"] = $this->Configuracion_Model->get("cfg_sexo");
             $params["formulario"] = $this->load->view("registro/terminacionParto/recien_nacido", $form_params, TRUE);
+            $params['info_perfil'] = $this->Pacientes_Model->getProfile($paciente);
             $this->load_layout("registro/atencionControlPrenatal/template", $params);
         }
         else{

@@ -7,7 +7,7 @@
                 <li class="menu-title" data-key="t-menu">Menú</li>
                 <!-- Invitados -->
                 <li>
-                    <a href="<?= base_url() ?>Inicio/pacientes">
+                    <a href="<?= base_url() ?>">
                         <i class="fas fa-tachometer-alt"></i>
                         <span data-key="t-dashboard">Inicio</span>
                     </a>

@@ -7,7 +7,7 @@ class ConsultaPreconcepcional extends Application_Controller {
 	{
 		parent::__construct();
 		$this->load->helper(['url']);
-        $this->load->model(['Configuracion_Model', 'Paraclinicos_Preconcepcional_Model']);
+        $this->load->model(['Configuracion_Model', 'Paraclinicos_Preconcepcional_Model', 'Pacientes_Model']);
         $this->load->library(['Form_validation']);
 	}
 
@@ -29,6 +29,7 @@ class ConsultaPreconcepcional extends Application_Controller {
             $form_params["paraclinicos"] = $this->Paraclinicos_Preconcepcional_Model->get_all($paciente, $numero_consulta);
             $form_params["tipo_paraclinicos"] = $this->Configuracion_Model->get("cfg_paraclinicos");
             $params["formulario"] = $this->load->view("registro/consultaPreconcepcional/paraclinicos", $form_params, TRUE);
+            $params['info_perfil'] = $this->Pacientes_Model->getProfile($paciente);
             $this->load_layout("registro/atencionControlPrenatal/template", $params);
         }
         else{
