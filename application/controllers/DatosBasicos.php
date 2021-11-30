@@ -29,6 +29,7 @@ class DatosBasicos extends Application_Controller {
             $form_params["tipo_doc"] = $this->Configuracion_Model->get('cfg_tipodoc');
             $form_params["sexos"] = $this->Configuracion_Model->get('cfg_sexo');
             $form_params["generos"] = $this->Configuracion_Model->get('cfg_genero');
+            $form_params['info_paciente'] = $this->Pacientes_Model->getPersonal($paciente);
             $params["formulario"] = $this->load->view("registro/datosBasicos/datos_personales", $form_params, TRUE);
             $params['info_perfil'] = $this->Pacientes_Model->getProfile($paciente);
             $this->load_layout("registro/datosBasicos/template", $params);
@@ -52,7 +53,11 @@ class DatosBasicos extends Application_Controller {
             // }
 
             $form_params["id_paciente"] = $paciente;
+            $form_params["mpios"] = $this->Configuracion_Model->get('cfg_municipio');
+            $form_params["zonas"] = $this->Configuracion_Model->get('cfg_zona');
+            $form_params['info_paciente'] = $this->Pacientes_Model->getUbicacion($paciente);
             $params["formulario"] = $this->load->view("registro/datosBasicos/datos_ubicacion", $form_params, TRUE);
+            $params['info_perfil'] = $this->Pacientes_Model->getProfile($paciente);
             $this->load_layout("registro/datosBasicos/template", $params);
         }
         else{
@@ -74,7 +79,13 @@ class DatosBasicos extends Application_Controller {
             // }
 
             $form_params["id_paciente"] = $paciente;
+            $form_params["poblaciones"] = $this->Configuracion_Model->get('cfg_poblacion');
+            $form_params["discapacidades"] = $this->Configuracion_Model->get('cfg_discapacidad');
+            $form_params["etnias"] = $this->Configuracion_Model->get('cfg_etnia');
+            $form_params["nivelesE"] = $this->Configuracion_Model->get('cfg_educativo');
+            $form_params['info_paciente'] = $this->Pacientes_Model->getOtros($paciente);
             $params["formulario"] = $this->load->view("registro/datosBasicos/otros_datos", $form_params, TRUE);
+            $params['info_perfil'] = $this->Pacientes_Model->getProfile($paciente);
             $this->load_layout("registro/datosBasicos/template", $params);
         }
         else{

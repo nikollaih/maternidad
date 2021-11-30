@@ -39,5 +39,29 @@ Class Pacientes_Model extends CI_Model {
         $hoy = new DateTime();
         return $hoy->diff($fecha_nacimiento)->y;
     }
+
+    public function getPersonal($data) {
+        $this->db->select('d.tipodoc, d.numero_documento, d.nombres, d.apellidos, d.sexo, d.genero, d.fecha_nac, d.telefono');
+        $this->db->from('datos_basicos d');
+        $this->db->where('d.id', $data);
+        $result = $this->db->get();
+        return ($result->num_rows() > 0) ? $result->result_array() : false;
+    }
+
+    public function getUbicacion($data) {
+        $this->db->select('d.mpio, d.zona');
+        $this->db->from('datos_basicos d');
+        $this->db->where('d.id', $data);
+        $result = $this->db->get();
+        return ($result->num_rows() > 0) ? $result->result_array() : false;
+    }
+
+    public function getOtros($data) {
+        $this->db->select('d.poblacion, d.discapacidad, d.etnia, d.educacion');
+        $this->db->from('datos_basicos d');
+        $this->db->where('d.id', $data);
+        $result = $this->db->get();
+        return ($result->num_rows() > 0) ? $result->result_array() : false;
+    }
 }
 ?>
