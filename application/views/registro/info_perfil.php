@@ -11,10 +11,10 @@
                     </div>
                     <div class="flex-grow-1">
                         <div>
-                            <h5 class="font-size-16 mb-1">Nombre paciente</h5>
-                            <p class="text-muted font-size-13">Edad</p>
+                            <h5 class="font-size-16 mb-1"><?=$info_perfil['nombre']?></h5>
+                            <p class="text-muted font-size-13"><?=$info_perfil['edad']?> Años</p>
                             <div class="d-flex flex-wrap align-items-start gap-2 gap-lg-3 text-muted font-size-13">
-                                <div><i class="mdi mdi-circle-medium me-1 text-success align-middle"></i>Estado</div>
+                                <div><i class="mdi mdi-circle-medium me-1 text-success align-middle"></i><?=$info_perfil['estado']?></div>
                             </div>
                         </div>
                     </div>
@@ -23,7 +23,7 @@
                 <div class="col-sm-auto order-1 order-sm-2">
                     <div class="d-flex align-items-start justify-content-end gap-2">
                     <div>
-                        <span class="tag">EPS</span>
+                        <span class="tag"><?=$info_perfil['eps']?></span>
                     </div>
                     </div>
                 </div>

@@ -7,7 +7,7 @@ class DatosBasicos extends Application_Controller {
 	{
 		parent::__construct();
 		$this->load->helper(['url']);
-        $this->load->model(['Configuracion_Model']);
+        $this->load->model(['Configuracion_Model', 'Pacientes_Model']);
 
 		
 	}
@@ -30,6 +30,7 @@ class DatosBasicos extends Application_Controller {
             $form_params["sexos"] = $this->Configuracion_Model->get('cfg_sexo');
             $form_params["generos"] = $this->Configuracion_Model->get('cfg_genero');
             $params["formulario"] = $this->load->view("registro/datosBasicos/datos_personales", $form_params, TRUE);
+            $params['info_perfil'] = $this->Pacientes_Model->getProfile($paciente);
             $this->load_layout("registro/datosBasicos/template", $params);
         }
         else{
