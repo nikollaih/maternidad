@@ -6,7 +6,7 @@ class AtencionControlPrenatal extends Application_Controller {
 	{
 		parent::__construct();
 		$this->load->helper(["url"]);
-        $this->load->model(["Formula_Obstetrica_Model", "Sustancias_Psicoactivas_Model", "Configuracion_Model", "Vacunacion_Model", "Riesgo_Model", "Paraclinicos_Model", "Mensuales_Model", "Control_Prenatal_Model", "Otras_Consultas_Model"]);
+        $this->load->model(["Formula_Obstetrica_Model", "Sustancias_Psicoactivas_Model", "Configuracion_Model", "Vacunacion_Model", "Riesgo_Model", "Paraclinicos_Model", "Mensuales_Model", "Control_Prenatal_Model", "Otras_Consultas_Model", "Pacientes_Model"]);
         $this->load->library(['Form_validation']);
 	}
 
@@ -30,6 +30,7 @@ class AtencionControlPrenatal extends Application_Controller {
             $form_params["id_paciente"] = $paciente;
             $form_params["formulas"] = $this->Formula_Obstetrica_Model->get_all($paciente);
             $params["formulario"] = $this->load->view("registro/atencionControlPrenatal/formula_obstetrica", $form_params, TRUE);
+            $params['info_perfil'] = $this->Pacientes_Model->getProfile($paciente);
             $this->load_layout("registro/atencionControlPrenatal/template", $params);
         }
         else{
@@ -117,6 +118,7 @@ class AtencionControlPrenatal extends Application_Controller {
             $form_params["tipo_sustancias"] = $this->Configuracion_Model->get("cfg_consumo_tipospa");
             $form_params["tipo_frecuencias"] = $this->Configuracion_Model->get("cfg_consumo_frecuencia");
             $params["formulario"] = $this->load->view("registro/atencionControlPrenatal/sustancias_psicoactivas", $form_params, TRUE);
+            $params['info_perfil'] = $this->Pacientes_Model->getProfile($paciente);
             $this->load_layout("registro/atencionControlPrenatal/template", $params);
         }
         else{
@@ -198,6 +200,7 @@ class AtencionControlPrenatal extends Application_Controller {
             $form_params["vacunas"] = $this->Vacunacion_Model->get_all($paciente);
             $form_params["tipo_vacunas"] = $this->Configuracion_Model->get("cfg_vacunas");
             $params["formulario"] = $this->load->view("registro/atencionControlPrenatal/vacunacion", $form_params, TRUE);
+            $params['info_perfil'] = $this->Pacientes_Model->getProfile($paciente);
             $this->load_layout("registro/atencionControlPrenatal/template", $params);
         }
         else{
@@ -279,6 +282,7 @@ class AtencionControlPrenatal extends Application_Controller {
             $form_params["paraclinicos"] = $this->Paraclinicos_Model->get_all($paciente);
             $form_params["tipo_paraclinicos"] = $this->Configuracion_Model->get("cfg_paraclinicos");
             $params["formulario"] = $this->load->view("registro/atencionControlPrenatal/paraclinicos", $form_params, TRUE);
+            $params['info_perfil'] = $this->Pacientes_Model->getProfile($paciente);
             $this->load_layout("registro/atencionControlPrenatal/template", $params);
         }
         else{
@@ -360,6 +364,7 @@ class AtencionControlPrenatal extends Application_Controller {
             $form_params["controles_prenatal"] = $this->Control_Prenatal_Model->get_all($paciente);
             $form_params["tipo_tardio"] = $this->Configuracion_Model->get("cfg_tardio");
             $params["formulario"] = $this->load->view("registro/atencionControlPrenatal/control_prenatal", $form_params, TRUE);
+            $params['info_perfil'] = $this->Pacientes_Model->getProfile($paciente);
             $this->load_layout("registro/atencionControlPrenatal/template", $params);
         }
         else{
@@ -440,6 +445,7 @@ class AtencionControlPrenatal extends Application_Controller {
             $form_params["id_paciente"] = $paciente;
             $form_params["mensuales"] = $this->Mensuales_Model->get_all($paciente);
             $params["formulario"] = $this->load->view("registro/atencionControlPrenatal/mensuales", $form_params, TRUE);
+            $params['info_perfil'] = $this->Pacientes_Model->getProfile($paciente);
             $this->load_layout("registro/atencionControlPrenatal/template", $params);
         }
         else{
@@ -521,6 +527,7 @@ class AtencionControlPrenatal extends Application_Controller {
             $form_params["otras_consultas"] = $this->Otras_Consultas_Model->get_all($paciente);
             $form_params["tipo_consultas"] = $this->Configuracion_Model->get("cfg_otras_consultas");
             $params["formulario"] = $this->load->view("registro/atencionControlPrenatal/otras_consultas", $form_params, TRUE);
+            $params['info_perfil'] = $this->Pacientes_Model->getProfile($paciente);
             $this->load_layout("registro/atencionControlPrenatal/template", $params);
         }
         else{
@@ -601,6 +608,7 @@ class AtencionControlPrenatal extends Application_Controller {
             $form_params["riesgos"] = $this->Riesgo_Model->get_all($paciente);
             $form_params["tipo_riesgos"] = $this->Configuracion_Model->get("cfg_riesgo");
             $params["formulario"] = $this->load->view("registro/atencionControlPrenatal/riesgos", $form_params, TRUE);
+            $params['info_perfil'] = $this->Pacientes_Model->getProfile($paciente);
             $this->load_layout("registro/atencionControlPrenatal/template", $params);
         }
         else{

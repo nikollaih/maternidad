@@ -12,7 +12,12 @@
                         <span data-key="t-dashboard">Inicio</span>
                     </a>
                 </li>
-
+                <li>
+                    <a href="<?= base_url() ?>DatosBasicos/creacion">
+                        <i class="fas fa-user-plus"></i>
+                        <span data-key="t-dashboard">Nuevo registro</span>
+                    </a>
+                </li>
                 <li class="">
                     <a href="javascript: void(0);" class="has-arrow" aria-expanded="false">
                     <i class="fas fa-cogs"></i>
