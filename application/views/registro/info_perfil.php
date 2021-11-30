@@ -30,7 +30,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <?php $this->load->view("registro/menu_registro") ?>
+                    <?php $this->load->view("registro/menu_registro", $info_perfil) ?>
                 </div>
             </div>
         </div>

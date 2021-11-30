@@ -16,7 +16,7 @@ Class Pacientes_Model extends CI_Model {
     }
 
     public function getProfile($data) {
-        $this->db->select('d.nombres, d.apellidos, d.fecha_nac, s.descripcion as estado, e.descripcion as eps');
+        $this->db->select('d.id, d.nombres, d.apellidos, d.fecha_nac, s.descripcion as estado, e.descripcion as eps');
         $this->db->from('datos_basicos d');
         $this->db->join('cfg_eps e', 'd.eps = e.codigo');
         $this->db->join('cfg_estado s', 'd.estado = s.codigo');
@@ -26,6 +26,7 @@ Class Pacientes_Model extends CI_Model {
         if ($result->num_rows() > 0) {
             $result = $result->result_array();
             $return = array(
+                'id' => $result[0]['id'],
                 'nombre' => $result[0]['nombres'].' '.$result[0]['apellidos'],
                 'edad' => $this->calcularEdad($result[0]['fecha_nac']),
                 'estado' => $result[0]['estado'],
@@ -41,7 +42,7 @@ Class Pacientes_Model extends CI_Model {
     }
 
     public function getPersonal($data) {
-        $this->db->select('d.tipodoc, d.numero_documento, d.nombres, d.apellidos, d.sexo, d.genero, d.fecha_nac, d.telefono');
+        $this->db->select('d.id, d.tipodoc, d.numero_documento, d.nombres, d.apellidos, d.sexo, d.genero, d.fecha_nac, d.telefono');
         $this->db->from('datos_basicos d');
         $this->db->where('d.id', $data);
         $result = $this->db->get();
