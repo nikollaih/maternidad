@@ -71,7 +71,7 @@
 }
 
 @media (prefers-reduced-motion:no-preference) {
-    :root {
+     :root {
         scroll-behavior: smooth
     }
 }
@@ -262,12 +262,12 @@ sup {
 }
 
 a {
-    color: #5156be;
+    color: #09425a;
     text-decoration: none
 }
 
 a:hover {
-    color: #414598;
+    color: #09425a;
     text-decoration: underline
 }
 
@@ -4402,7 +4402,8 @@ fieldset:disabled .btn {
 .dropdown-item:active {
     color: #343a40;
     text-decoration: none;
-    background-color: #f8f9fa
+    background-color: #e7e7e7;
+    border-radius: 2px;
 }
 
 .dropdown-item.disabled,
