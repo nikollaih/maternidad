@@ -43,9 +43,8 @@
                     Terminación del parto y lactancia <i class="mdi mdi-chevron-down"></i>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="<?= base_url() ?>TerminacionParto/interrupcionVoluntaria/1">Interrupción voluntaria</a>
+                    <a class="dropdown-item" href="<?= base_url() ?>TerminacionParto/recienNacido/1">Atención al recien nacido</a>
                 </div>
             </li>
          </ul>

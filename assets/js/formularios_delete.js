@@ -43,6 +43,16 @@ jQuery(document).on("click", ".delete-paraclinico-preconcepcional", function() {
     delete_row(id, "ConsultaPreconcepcional/delete_paraclinico", 'El paraclinico será eliminada!');
 });
 
+jQuery(document).on("click", ".delete-terminacion-voluntaria", function() {
+    let id = jQuery(this).attr("data-id");
+    delete_row(id, "TerminacionParto/delete_interrupcion_voluntaria", 'El registro será eliminado!');
+});
+
+jQuery(document).on("click", ".delete-recien-nacido", function() {
+    let id = jQuery(this).attr("data-id");
+    delete_row(id, "TerminacionParto/delete_recien_nacido", 'El registro será eliminado!');
+});
+
 function delete_row(id, url, text) {
     swal({
             title: '¿Estás seguro?',
