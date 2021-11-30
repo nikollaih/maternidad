@@ -70,6 +70,38 @@
                         </select>
                     </div>
                 </div>
+                <div class="col">
+                    <div class="form-outline">
+                        <label class="form-label" for="eps">Eps</label>
+                        <select class="select form-control" id="eps" name="eps">
+                        <?php
+                            for ($i=0; $i < count($eps); $i++) { 
+                        ?>
+                        <option value="<?=$eps[$i]['codigo']?>" <?=( $eps[$i]['codigo'] == $info_paciente[0]['eps'] ? 'selected="selected"' : '' )?>>
+                            <?=$eps[$i]['descripcion']?>
+                        </option>
+                        <?php
+                            }
+                        ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-outline">
+                        <label class="form-label" for="regimen">Régimen</label>
+                        <select class="select form-control" id="regimen" name="regimen">
+                        <?php
+                            for ($i=0; $i < count($regimenes); $i++) { 
+                        ?>
+                        <option value="<?=$regimenes[$i]['codigo']?>" <?=( $regimenes[$i]['codigo'] == $info_paciente[0]['regimen'] ? 'selected="selected"' : '' )?>>
+                            <?=$regimenes[$i]['descripcion']?>
+                        </option>
+                        <?php
+                            }
+                        ?>
+                        </select>
+                    </div>
+                </div>
             </div>
             <div class="row align-items-end">
                 <div class="col text-end">

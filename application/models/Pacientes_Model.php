@@ -58,7 +58,7 @@ Class Pacientes_Model extends CI_Model {
     }
 
     public function getOtros($data) {
-        $this->db->select('d.poblacion, d.discapacidad, d.etnia, d.educacion');
+        $this->db->select('d.poblacion, d.discapacidad, d.etnia, d.educacion, d.eps, d.regimen');
         $this->db->from('datos_basicos d');
         $this->db->where('d.id', $data);
         $result = $this->db->get();
@@ -70,6 +70,10 @@ Class Pacientes_Model extends CI_Model {
         unset($data['id']);
         $this->db->where('id', $id);
         return $this->db->update('datos_basicos', $data);
+    }
+
+    public function crear($data) {
+        return $this->db->insert('datos_basicos', $data);
     }
 }
 ?>

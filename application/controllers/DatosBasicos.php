@@ -12,6 +12,62 @@ class DatosBasicos extends Application_Controller {
 		
 	}
 
+    public function creacion() {
+        $params['title'] = 'Datos básicos';
+        $params['subtitle'] = 'Nuevo registro';
+
+        if($this->input->post()){
+            $data = $this->input->post();
+            $params["message"] = $this->guardarCreacion($data);
+        }
+
+        $params['tipo_doc'] = $this->Configuracion_Model->get('cfg_tipodoc');
+        $params['sexos'] = $this->Configuracion_Model->get('cfg_sexo');
+        $params['generos'] = $this->Configuracion_Model->get('cfg_genero');
+        $params['mpios'] = $this->Configuracion_Model->get('cfg_municipio');
+        $params['zonas'] = $this->Configuracion_Model->get('cfg_zona');
+        $params['poblaciones'] = $this->Configuracion_Model->get('cfg_poblacion');
+        $params['discapacidades'] = $this->Configuracion_Model->get('cfg_discapacidad');
+        $params['etnias'] = $this->Configuracion_Model->get('cfg_etnia');
+        $params['nivelesE'] = $this->Configuracion_Model->get('cfg_educativo');
+        $params['eps'] = $this->Configuracion_Model->get('cfg_eps');
+        $params['regimenes'] = $this->Configuracion_Model->get('cfg_regimen');
+        $this->load_layout('registro/datosBasicos/creacion', $params);
+    }
+    
+    public function guardarCreacion($data){
+        $this->form_validation->set_rules('tipodoc', 'Tipo de documento', 'required');
+        $this->form_validation->set_rules('numero_documento', 'Número de documento', 'required');
+        $this->form_validation->set_rules('nombres', 'Nombres', 'required');
+        $this->form_validation->set_rules('apellidos', 'Apellidos', 'required');
+        $this->form_validation->set_rules('sexo', 'Sexo', 'required');
+        $this->form_validation->set_rules('genero', 'Genero', 'required');
+        $this->form_validation->set_rules('fecha_nac', 'Fecha de nacimiento', 'required');
+        $this->form_validation->set_rules('telefono', 'teléfono', 'required');
+        $this->form_validation->set_rules('mpio', 'Municipio', 'required');
+        $this->form_validation->set_rules('zona', 'Zona', 'required');
+        $this->form_validation->set_rules('poblacion', 'Tipo de población beneficiaria', 'required');
+        $this->form_validation->set_rules('discapacidad', 'Discapacidad', 'required');
+        $this->form_validation->set_rules('etnia', 'Étnia', 'required');
+        $this->form_validation->set_rules('educacion', 'Nivel educativo', 'required');
+        $this->form_validation->set_rules('eps', 'Eps', 'required');
+        $this->form_validation->set_rules('regimen', 'Régimen', 'required');
+
+        // Check if input rules are ok
+        if ($this->form_validation->run() == false) {
+            $return = array('type' => 'danger', 'message' => 'Por favor complete todos los campos.', 'success' => false);
+        }
+        else{
+            if($this->Pacientes_Model->crear($data)){
+                $return = array('type' => 'success', 'message' => 'Datos guardados satisfactoriamente.', 'success' => true);
+            }
+            else{
+                $return = array('type' => 'danger', 'message' => 'Ha ocurrido un error, por favor itente de nuevo más tarde.', 'success' => false);
+            }
+        }
+        return $return;
+    }
+
 	public function personales($paciente = null){
 		if($paciente){
             $params['title'] = 'Datos básicos';
@@ -128,6 +184,8 @@ class DatosBasicos extends Application_Controller {
             $form_params['discapacidades'] = $this->Configuracion_Model->get('cfg_discapacidad');
             $form_params['etnias'] = $this->Configuracion_Model->get('cfg_etnia');
             $form_params['nivelesE'] = $this->Configuracion_Model->get('cfg_educativo');
+            $form_params['eps'] = $this->Configuracion_Model->get('cfg_eps');
+            $form_params['regimenes'] = $this->Configuracion_Model->get('cfg_regimen');
             $form_params['info_paciente'] = $this->Pacientes_Model->getOtros($paciente);
             $params['formulario'] = $this->load->view('registro/datosBasicos/otros_datos', $form_params, TRUE);
             $params['info_perfil'] = $this->Pacientes_Model->getProfile($paciente);
@@ -143,6 +201,8 @@ class DatosBasicos extends Application_Controller {
         $this->form_validation->set_rules('discapacidad', 'Discapacidad', 'required');
         $this->form_validation->set_rules('etnia', 'Étnia', 'required');
         $this->form_validation->set_rules('educacion', 'Nivel educativo', 'required');
+        $this->form_validation->set_rules('eps', 'Eps', 'required');
+        $this->form_validation->set_rules('regimen', 'Régimen', 'required');
 
         // Check if input rules are ok
         if ($this->form_validation->run() == false) {

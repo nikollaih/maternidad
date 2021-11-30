@@ -7,7 +7,7 @@ class TerminacionParto extends Application_Controller {
 	{
 		parent::__construct();
 		$this->load->helper(['url']);
-        $this->load->model(['Configuracion_Model', 'Terminacion_Voluntaria_Model', 'Recien_Nacido_Model', 'Atencion_Parto_Model', 'Control_Recien_Nacido_Madre_Model']);
+        $this->load->model(['Configuracion_Model', 'Terminacion_Voluntaria_Model', 'Recien_Nacido_Model', 'Atencion_Parto_Model', 'Control_Recien_Nacido_Madre_Model', 'Pacientes_Model']);
         $this->load->library(['Form_validation']);
 	}
 
@@ -283,6 +283,7 @@ class TerminacionParto extends Application_Controller {
             $form_params["controles"] = $this->Control_Recien_Nacido_Madre_Model->get_all($paciente);
             $form_params["tipos_planificacion"] = $this->Configuracion_Model->get("cfg_planificacion");
             $params["formulario"] = $this->load->view("registro/terminacionParto/control_recien_nacido_madre", $form_params, TRUE);
+            $params['info_perfil'] = $this->Pacientes_Model->getProfile($paciente);
             $this->load_layout("registro/atencionControlPrenatal/template", $params);
         }
         else{
