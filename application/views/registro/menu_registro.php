@@ -6,7 +6,7 @@
          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
          <li class="nav-item dropdown">
                 <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                    1. Datos básicos <i class="mdi mdi-chevron-down"></i>
+                    Datos básicos <i class="mdi mdi-chevron-down"></i>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="<?= base_url() ?>DatosBasicos/personales/1">Información personal</a>
@@ -16,18 +16,17 @@
             </li>
             <li class="nav-item dropdown">
                 <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                    2. Control preconcepcional <i class="mdi mdi-chevron-down"></i>
+                    Control preconcepcional <i class="mdi mdi-chevron-down"></i>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="<?= base_url() ?>ConsultaPreconcepcional/paraclinicos/1/1">Paraclinicos de primera consulta</a>
+                    <a class="dropdown-item" href="<?= base_url() ?>ConsultaPreconcepcional/paraclinicos/1/2">Paraclinicos de segunda consulta</a>
                 </div>
             </li>
             <!-- Navbar dropdown -->
             <li class="nav-item dropdown">
                 <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                    3. Atención control prenatal <i class="mdi mdi-chevron-down"></i>
+                    Atención control prenatal <i class="mdi mdi-chevron-down"></i>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="<?= base_url() ?>AtencionControlPrenatal/controlMensual/1">Control Mensual</a>
@@ -41,12 +40,11 @@
             </li>
             <li class="nav-item dropdown">
                 <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                    4. Terminación del parto y lactancia <i class="mdi mdi-chevron-down"></i>
+                    Terminación del parto y lactancia <i class="mdi mdi-chevron-down"></i>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="<?= base_url() ?>TerminacionParto/interrupcionVoluntaria/1">Interrupción voluntaria</a>
+                    <a class="dropdown-item" href="<?= base_url() ?>TerminacionParto/recienNacido/1">Atención al recien nacido</a>
                 </div>
             </li>
          </ul>
