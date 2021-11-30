@@ -19,15 +19,17 @@
          ?>
       </div>
       <div class="row">
-         <?php
-            if(isset($message)){
-         ?>
-            <div class="alert alert-<?= $message["type"] ?> alert-dismissible fade show" role="alert">
-            <?= $message["message"] ?>
-            </div>
-         <?php
-            }
-         ?>
+         <div class="col-md-12">
+            <?php
+               if(isset($message)){
+            ?>
+               <div class="alert alert-<?= $message["type"] ?> alert-dismissible fade show" role="alert">
+               <?= $message["message"] ?>
+               </div>
+            <?php
+               }
+            ?>
+         </div>
          <div class="col-md-12">
             <?= $formulario ?>
          </div>

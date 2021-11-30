@@ -34,6 +34,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.js" integrity="sha512-CWVDkca3f3uAWgDNVzW+W4XJbiC3CH84P2aWZXj+DqI6PNbTzXbl1dIzEHeNJpYSn4B6U8miSZb/hCws7FnUZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="<?= base_url() ?>/assets/js/app.js"></script>
         <script src="<?= base_url() ?>/assets/js/general.js"></script>
-        <script src="<?= base_url() ?>/assets/js/atencion_control_prenatal.js"></script>
+        <script src="<?= base_url() ?>/assets/js/formularios_delete.js"></script>
     </body>
 </html>

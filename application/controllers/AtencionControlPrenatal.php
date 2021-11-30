@@ -290,7 +290,6 @@ class AtencionControlPrenatal extends Application_Controller {
         $this->form_validation->set_rules('tipo', 'Tipo paraclinico', 'required');
         $this->form_validation->set_rules('fecha', 'Fecha', 'required');
         $this->form_validation->set_rules('resultado', 'Resultado', 'required');
-        $this->form_validation->set_rules('observacion', 'Observaciones', 'required');
 
         // Check if input rules are ok
         if ($this->form_validation->run() == false) {
@@ -582,7 +581,7 @@ class AtencionControlPrenatal extends Application_Controller {
     
 
     /* ========================================================================
-    ============================ OTRAS CONSULTAS =============================
+    ============================ RIESGOS =============================
     ===========================================================================*/
 
 	function riesgos($paciente = null){

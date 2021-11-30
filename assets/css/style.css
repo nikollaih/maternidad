@@ -70,4 +70,9 @@ select.form-control {
 
 .navbar.perfil-menu .nav-item {
     font-weight: bold;
+    border-right: 1px solid #c3c3c3;
+}
+
+.navbar.perfil-menu .nav-item:last-child {
+    border-right: 0;
 }
