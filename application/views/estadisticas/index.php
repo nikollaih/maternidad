@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-md-12 col-sm-12">
                 <div class="card">
-                    <div class="card-header">Ingresos por mes</div>
+                    <div class="card-header">Madres gestantes por municipio</div>
                     <div class="card-body">
                         <canvas id="ingresos_mes" width="400" height="400"></canvas>
                     </div>
@@ -65,19 +65,18 @@
    </div>
    <!-- container-fluid -->
 </div>
-
 <script>
     jQuery(document).ready(function(){
         const ingresos_mes = document.getElementById('ingresos_mes').getContext('2d');
         const registradas_activas = document.getElementById('registradas_activas').getContext('2d');
 
         const IngresosMes = new Chart(ingresos_mes, {
-            type: 'line',
+            type: 'bar',
             data: {
-                labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio ", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+                labels: [<?=$bar['labels']?>],
                 datasets: [{
-                    label: 'Ingresos por mes',
-                    data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
+                    label: 'Madres por municipio',
+                    data: [<?=$bar['data']?>],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
