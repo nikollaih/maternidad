@@ -24,6 +24,7 @@ class Configuracion extends Application_Controller {
 		array('nombre' => 'Tipos de parto','tabla' => 'cfg_tipo_parto'),
 		array('nombre' => 'Vacunas','tabla' => 'cfg_vacunas'),
 		array('nombre' => 'Zonas','tabla' => 'cfg_zona'),
+		array('nombre' => 'Ingreso tadío','tabla' => 'cfg_tardio')
 	);
 
     function __construct()
@@ -35,8 +36,7 @@ class Configuracion extends Application_Controller {
 		
 	}
 
-	public function listar(){
-		$index = $this->input->get('id', TRUE);
+	public function listar($index){
 		$params['title'] = 'Configuracion';
         $params['subtitle'] = $this->menuConfig[$index]['nombre'];
 		$params['tableName'] = $this->menuConfig[$index]['tabla'];
@@ -45,7 +45,14 @@ class Configuracion extends Application_Controller {
 
         $this->load_layout('configuracion/configuraciones', $params);
 	}
+	public function paraclinicos(){
+		$params['title'] = 'Configuracion';
+        $params['subtitle'] = 'Paraclinicos';
+        $params['datos'] = $this->Configuracion_Model->get('cfg_paraclinicos');
 
+        $this->load_layout('configuracion/paraclinicos', $params);
+	}
+	
 	public function insertar(){
 		$info = $this->input->post();
 		$tableName = $info['tableName'];
@@ -59,6 +66,18 @@ class Configuracion extends Application_Controller {
 		header('Location: '.base_url().'Configuracion/listar?id='.$url);
 	}
 
+	public function insertarParaclinico(){
+		$info = $this->input->post();
+		$tableName = 'cfg_paraclinicos';
+
+		$exist = $this->Configuracion_Model->find($info['codigo'], $tableName);
+		if (!$exist) {
+			$this->Configuracion_Model->create($info, $tableName);
+		}
+		
+		header('Location: '.base_url().'Configuracion/paraclinicos');
+	}
+
 	public function eliminar(){
 		$code = $this->input->post()['idItem'];
 		$tableName = $this->input->post()['tableName'];
@@ -66,5 +85,12 @@ class Configuracion extends Application_Controller {
 		$result = $this->Configuracion_Model->delete($code, $tableName);
 		
 		header('Location: '.base_url().'Configuracion/listar?id='.$url);
+	}
+
+	public function eliminarParaclinico(){
+		$code = $this->input->post()['idItem'];
+		$result = $this->Configuracion_Model->delete($code, 'cfg_paraclinicos');
+		
+		header('Location: '.base_url().'Configuracion/paraclinicos');
 	}
 }
