@@ -40,7 +40,7 @@ class Auth extends Application_Controller {
 
 		$params["title"] = "Mezclas";
         $params["subtitle"] = "Mezclas";
-        $this->load_layout("generales/auth/login", $params);
+        $this->load->view("generales/auth/login", $params);
 	}
 
 
