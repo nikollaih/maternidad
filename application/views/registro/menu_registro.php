@@ -19,7 +19,7 @@
                     Control preconcepcional <i class="mdi mdi-chevron-down"></i>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="<?= base_url() ?>ConsultaPreconcepcional/paraclinicos/<?= $id ?>/<?= $id ?>">Paraclinicos de primera consulta</a>
+                    <a class="dropdown-item" href="<?= base_url() ?>ConsultaPreconcepcional/paraclinicos/<?= $id ?>/1">Paraclinicos de primera consulta</a>
                     <a class="dropdown-item" href="<?= base_url() ?>ConsultaPreconcepcional/paraclinicos/<?= $id ?>/2">Paraclinicos de segunda consulta</a>
                 </div>
             </li>
