@@ -21,9 +21,9 @@ class Estadisticas extends Application_Controller {
 		}
 		$params['bar']['labels'] = substr($params['bar']['labels'], 0, -1);
 		$params['bar']['data'] = substr($params['bar']['data'], 0, -1);
-        $params['activas'] = 30;
-        $params['trabajadoras_sexuales'] = 15;
-        $params['riesgo_spa'] = 10;
+        $params['activas'] = 4;
+        $params['trabajadoras_sexuales'] = 1;
+        $params['riesgo_spa'] = 2;
 		$this->load_layout('estadisticas/index', $params);
 	}
 }
