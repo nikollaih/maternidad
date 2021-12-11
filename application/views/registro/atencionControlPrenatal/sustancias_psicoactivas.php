@@ -7,8 +7,8 @@
          <div class="row align-items-end mb-4">
                <div class="col">
                   <div class="form-outline">
-                        <label class="form-label" for="cod-sustancia">Tipo de sustancia que consume</label>
-                        <select class="select form-control" id="cod-sustancia" name="cod_sustancia">
+                        <label class="form-label" for="cod-sustancia">Tipo de sustancia que consume <span class="color-red">*</span></label>
+                        <select required class="select form-control" id="cod-sustancia" name="cod_sustancia">
                            <option value="">-- Seleccionar</option>
                            <?php
                               if($tipo_sustancias){
@@ -24,8 +24,8 @@
                </div>
                <div class="col">
                   <div class="form-outline">
-                        <label class="form-label" for="cod-frecuencia">Frecuencia</label>
-                        <select class="select form-control" id="cod-frecuencia" name="cod_frecuencia">
+                        <label class="form-label" for="cod-frecuencia">Frecuencia <span class="color-red">*</span></label>
+                        <select required class="select form-control" id="cod-frecuencia" name="cod_frecuencia">
                            <option value="">-- Seleccionar</option>
                            <?php
                               if($tipo_frecuencias){
@@ -41,8 +41,8 @@
                </div>
                <div class="col">
                   <div class="form-outline">
-                        <label class="form-label" for="ultimo-consumo">Último consumo</label>
-                        <input type="date" id="ultimo-consumo" name="fecha_ultimo_consumo" class="form-control" value="<?= (isset($data["fecha_ultimo_consumo"])) ? $data["fecha_ultimo_consumo"] : "" ?>" />
+                        <label class="form-label" for="ultimo-consumo">Último consumo <span class="color-red">*</span></label>
+                        <input required type="date" id="ultimo-consumo" name="fecha_ultimo_consumo" class="form-control" value="<?= (isset($data["fecha_ultimo_consumo"])) ? $data["fecha_ultimo_consumo"] : "" ?>" />
                   </div>
                </div>
             </div>

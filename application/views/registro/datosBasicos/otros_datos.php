@@ -6,8 +6,8 @@
             <div class="row align-items-end mb-4">
                 <div class="col">
                     <div class="form-outline">
-                        <label class="form-label" for="poblacion">Tipo de población beneficiaria</label>
-                        <select class="select form-control" id="poblacion" name="poblacion">
+                        <label class="form-label" for="poblacion">Tipo de población beneficiaria <span class="color-red">*</span></label>
+                        <select required class="select form-control" id="poblacion" name="poblacion">
                         <?php
                             for ($i=0; $i < count($poblaciones); $i++) { 
                         ?>
@@ -22,8 +22,8 @@
                 </div>
                 <div class="col">
                     <div class="form-outline">
-                        <label class="form-label" for="discapacidad">Discapacidad</label>
-                        <select class="select form-control" id="discapacidad" name="discapacidad">
+                        <label class="form-label" for="discapacidad">Discapacidad <span class="color-red">*</span></label>
+                        <select required class="select form-control" id="discapacidad" name="discapacidad">
                         <?php
                             for ($i=0; $i < count($discapacidades); $i++) { 
                         ?>
@@ -38,8 +38,8 @@
                 </div>
                 <div class="col">
                     <div class="form-outline">
-                        <label class="form-label" for="etnia">Étnia</label>
-                        <select class="select form-control" id="etnia" name="etnia">
+                        <label class="form-label" for="etnia">Étnia <span class="color-red">*</span></label>
+                        <select required class="select form-control" id="etnia" name="etnia">
                         <?php
                             for ($i=0; $i < count($etnias); $i++) { 
                         ?>
@@ -56,8 +56,8 @@
             <div class="row align-items-end mb-4">
                 <div class="col">
                     <div class="form-outline">
-                        <label class="form-label" for="educacion">Nivel educativo</label>
-                        <select class="select form-control" id="educacion" name="educacion">
+                        <label class="form-label" for="educacion">Nivel educativo <span class="color-red">*</span></label>
+                        <select required class="select form-control" id="educacion" name="educacion">
                         <?php
                             for ($i=0; $i < count($nivelesE); $i++) { 
                         ?>
@@ -72,8 +72,8 @@
                 </div>
                 <div class="col">
                     <div class="form-outline">
-                        <label class="form-label" for="eps">Eps</label>
-                        <select class="select form-control" id="eps" name="eps">
+                        <label class="form-label" for="eps">Eps <span class="color-red">*</span></label>
+                        <select required class="select form-control" id="eps" name="eps">
                         <?php
                             for ($i=0; $i < count($eps); $i++) { 
                         ?>
@@ -88,8 +88,8 @@
                 </div>
                 <div class="col">
                     <div class="form-outline">
-                        <label class="form-label" for="regimen">Régimen</label>
-                        <select class="select form-control" id="regimen" name="regimen">
+                        <label class="form-label" for="regimen">Régimen <span class="color-red">*</span></label>
+                        <select required class="select form-control" id="regimen" name="regimen">
                         <?php
                             for ($i=0; $i < count($regimenes); $i++) { 
                         ?>

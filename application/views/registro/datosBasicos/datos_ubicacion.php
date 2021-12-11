@@ -8,8 +8,8 @@
             <div class="row align-items-end mb-4">
                 <div class="col">
                     <div class="form-outline">
-                        <label class="form-label" for="mpio">Municipio</label>
-                        <select class="select form-control" id="mpio" name="mpio">
+                        <label class="form-label" for="mpio">Municipio <span class="color-red">*</span></label>
+                        <select required class="select form-control" id="mpio" name="mpio">
                         <?php
                             for ($i=0; $i < count($mpios); $i++) { 
                         ?>
@@ -24,8 +24,8 @@
                 </div>
                 <div class="col">
                     <div class="form-outline">
-                        <label class="form-label" for="zona">Zona</label>
-                        <select class="select form-control" id="zona" name="zona">
+                        <label class="form-label" for="zona">Zona <span class="color-red">*</span></label>
+                        <select required class="select form-control" id="zona" name="zona">
                         <?php
                             for ($i=0; $i < count($zonas); $i++) { 
                         ?>

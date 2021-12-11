@@ -8,8 +8,8 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-12 mb-4">
                         <div class="form-outline">
-                            <label class="form-label" for="codigo_riesgo">Tipo de riesgo</label>
-                            <select class="select form-control" id="codigo_riesgo" name="codigo_riesgo">
+                            <label class="form-label" for="codigo_riesgo">Tipo de riesgo <span class="color-red">*</span></label>
+                            <select required class="select form-control" id="codigo_riesgo" name="codigo_riesgo">
                                 <option value="">-- Seleccionar</option>
                                 <?php
                                     if($tipo_riesgos){
@@ -25,34 +25,34 @@
                     </div>
                     <div class="col-md-4 col-sm-12 mb-4">
                         <div class="form-outline">
-                            <label class="form-label" for="fum">FUM</label>
-                            <input type="text" id="fum" name="fum" class="form-control" value="<?= (isset($data["fum"])) ? $data["fum"] : "" ?>" />
+                            <label class="form-label" for="fum">FUM <span class="color-red">*</span></label>
+                            <input required type="text" id="fum" name="fum" class="form-control" value="<?= (isset($data["fum"])) ? $data["fum"] : "" ?>" />
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12 mb-4">
                         <div class="form-outline">
-                            <label class="form-label" for="fpp">FPP</label>
-                            <input type="text" id="fpp" name="fpp" class="form-control" value="<?= (isset($data["fpp"])) ? $data["fpp"] : "" ?>" />
+                            <label class="form-label" for="fpp">FPP <span class="color-red">*</span></label>
+                            <input required type="text" id="fpp" name="fpp" class="form-control" value="<?= (isset($data["fpp"])) ? $data["fpp"] : "" ?>" />
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4 col-sm-12 mb-4">
                         <div class="form-outline">
-                            <label class="form-label" for="dias_parto">Días para el parto</label>
-                            <input type="number" id="dias_parto" name="dias_parto" class="form-control" value="<?= (isset($data["dias_parto"])) ? $data["dias_parto"] : "" ?>" />
+                            <label class="form-label" for="dias_parto">Días para el parto <span class="color-red">*</span></label>
+                            <input required type="number" id="dias_parto" name="dias_parto" class="form-control" value="<?= (isset($data["dias_parto"])) ? $data["dias_parto"] : "" ?>" />
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12 mb-4">
                         <div class="form-outline">
-                            <label class="form-label" for="edad_gestacional">Edad gestacional</label>
-                            <input type="text" id="edad_gestacional" name="edad_gestacional" class="form-control" value="<?= (isset($data["edad_gestacional"])) ? $data["edad_gestacional"] : "" ?>" />
+                            <label class="form-label" for="edad_gestacional">Edad gestacional <span class="color-red">*</span></label>
+                            <input required type="text" id="edad_gestacional" name="edad_gestacional" class="form-control" value="<?= (isset($data["edad_gestacional"])) ? $data["edad_gestacional"] : "" ?>" />
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12 mb-4">
                         <div class="form-outline">
-                            <label class="form-label" for="alarma_parto">Alarma - PARTO</label>
-                            <input type="text" id="alarma_parto" name="alarma_parto" class="form-control" value="<?= (isset($data["alarma_parto"])) ? $data["alarma_parto"] : "" ?>" />
+                            <label class="form-label" for="alarma_parto">Alarma - PARTO <span class="color-red">*</span></label>
+                            <input required type="text" id="alarma_parto" name="alarma_parto" class="form-control" value="<?= (isset($data["alarma_parto"])) ? $data["alarma_parto"] : "" ?>" />
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                      <td><strong>FPP</strong></td>
                      <td><strong>Días para el parto</strong></td>
                      <td><strong>Edad gestacional</strong></td>
-                     <td><strong>Alarma - PArto</strong></td>
+                     <td><strong>Alarma - Parto</strong></td>
                      <td></td>
                   </tr>
                </thead>

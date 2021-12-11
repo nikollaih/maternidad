@@ -8,14 +8,22 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-12 mb-4">
                         <div class="form-outline">
-                            <label class="form-label" for="mes">Mes</label>
-                            <select class="select form-control" id="mes" name="mes">
+                            <label class="form-label" for="mes">Mes <span class="color-red">*</span></label>
+                            <select class="select form-control" id="mes" name="mes" required>
                                 <option value="">-- Seleccionar</option>
                                 <?php
                                         for ($i=1; $i < 10; $i++) {
-                                ?>
-                                            <option <?= (isset($data["mes"]) && $data["mes"] == $i) ? "selected" : "" ?> value="<?= $i ?>"><?= $i ?></option>
-                                <?php
+                                            if($i >= 7){
+                                                ?>
+                                                <option <?= (isset($data["mes"]) && $data["mes"] == $i."-1") ? "selected" : "" ?> value="<?=$i."-1" ?>"><?= $i."-1" ?></option>
+                                                <option <?= (isset($data["mes"]) && $data["mes"] == $i."-2") ? "selected" : "" ?> value="<?= $i."-2" ?>"><?= $i."-2" ?></option>
+                                    <?php
+                                            }
+                                            else{
+                                                ?>
+                                                <option <?= (isset($data["mes"]) && $data["mes"] == $i) ? "selected" : "" ?> value="<?= $i ?>"><?= $i ?></option>
+                                    <?php
+                                            }
                                         }
                                 ?>
                             </select>
@@ -23,20 +31,20 @@
                     </div>
                     <div class="col-md-3 col-sm-12 mb-4">
                         <div class="form-outline">
-                            <label class="form-label" for="fecha">Fecha</label>
-                            <input type="date" id="fecha" name="fecha" class="form-control" value="<?= (isset($data["fecha"])) ? $data["fecha"] : "" ?>" />
+                            <label class="form-label" for="fecha">Fecha <span class="color-red">*</span></label>
+                            <input required type="date" id="fecha" name="fecha" class="form-control" value="<?= (isset($data["fecha"])) ? $data["fecha"] : "" ?>" />
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-12 mb-4">
                         <div class="form-outline">
-                            <label class="form-label" for="peso">Peso</label>
-                            <input type="number" id="peso" name="peso" class="form-control" value="<?= (isset($data["peso"])) ? $data["peso"] : "" ?>" />
+                            <label class="form-label" for="peso">Peso <span class="color-red">*</span></label>
+                            <input required type="number" id="peso" name="peso" class="form-control" value="<?= (isset($data["peso"])) ? $data["peso"] : "" ?>" />
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-12 mb-4">
                         <div class="form-outline">
-                            <label class="form-label" for="fc">FC</label>
-                            <input type="text" id="fc" name="fc" class="form-control" value="<?= (isset($data["fc"])) ? $data["fc"] : "" ?>" />
+                            <label class="form-label" for="fc">FC <span class="color-red">*</span></label>
+                            <input required type="text" id="fc" name="fc" class="form-control" value="<?= (isset($data["fc"])) ? $data["fc"] : "" ?>" />
                         </div>
                     </div>
                 </div>
@@ -44,26 +52,26 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-12 mb-4">
                         <div class="form-outline">
-                            <label class="form-label" for="ta">TA</label>
-                            <input type="text" id="ta" name="ta" class="form-control" value="<?= (isset($data["ta"])) ? $data["ta"] : "" ?>" />
+                            <label class="form-label" for="ta">TA <span class="color-red">*</span></label>
+                            <input required type="text" id="ta" name="ta" class="form-control" value="<?= (isset($data["ta"])) ? $data["ta"] : "" ?>" />
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-12 mb-4">
                         <div class="form-outline">
-                            <label class="form-label" for="au">AU</label>
-                            <input type="text" id="au" name="au" class="form-control" value="<?= (isset($data["au"])) ? $data["au"] : "" ?>" />
+                            <label class="form-label" for="au">AU <span class="color-red">*</span></label>
+                            <input required type="text" id="au" name="au" class="form-control" value="<?= (isset($data["au"])) ? $data["au"] : "" ?>" />
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-12 mb-4">
                         <div class="form-outline">
-                            <label class="form-label" for="fcf">FCF</label>
-                            <input type="text" id="fcf" name="fcf" class="form-control" value="<?= (isset($data["fcf"])) ? $data["fcf"] : "" ?>" />
+                            <label class="form-label" for="fcf">FCF <span class="color-red">*</span></label>
+                            <input required type="text" id="fcf" name="fcf" class="form-control" value="<?= (isset($data["fcf"])) ? $data["fcf"] : "" ?>" />
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-12 mb-4">
                         <div class="form-outline">
-                            <label class="form-label" for="imc">IMC</label>
-                            <input type="text" id="imc" name="imc" class="form-control" value="<?= (isset($data["imc"])) ? $data["imc"] : "" ?>" />
+                            <label class="form-label" for="imc">IMC <span class="color-red">*</span></label>
+                            <input required type="text" id="imc" name="imc" class="form-control" value="<?= (isset($data["imc"])) ? $data["imc"] : "" ?>" />
                         </div>
                     </div>
                 </div>
@@ -71,20 +79,42 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-12 mb-4">
                         <div class="form-outline">
-                            <label class="form-label" for="edema_minf">Edema MINF</label>
-                            <input type="text" id="edema_minf" name="edema_minf" class="form-control" value="<?= (isset($data["edema_minf"])) ? $data["edema_minf"] : "" ?>" />
+                            <label class="form-label" for="edema_minf">Edema MINF <span class="color-red">*</span></label>
+                            <input required type="text" id="edema_minf" name="edema_minf" class="form-control" value="<?= (isset($data["edema_minf"])) ? $data["edema_minf"] : "" ?>" />
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12 mb-4">
                         <div class="form-outline">
-                            <label class="form-label" for="conciencia">Estado de conciencia</label>
-                            <input type="text" id="conciencia" name="conciencia" class="form-control" value="<?= (isset($data["conciencia"])) ? $data["fcf"] : "" ?>" />
+                            <label class="form-label" for="conciencia">Estado de conciencia <span class="color-red">*</span></label>
+                            <select required class="select form-control" id="conciencia" name="conciencia" required>
+                                <option value="">-- Seleccionar</option>
+                                <?php
+                                    if($tipo_estados_conciencia){
+                                       foreach ($tipo_estados_conciencia as $tec) {
+                                ?>
+                                        <option <?= (isset($data["conciencia"]) && $data["conciencia"] == $tec["codigo"]) ? "selected" : "" ?> value="<?= $tec["codigo"] ?>"><?= $tec["descripcion"] ?></option>
+                                <?php
+                                        }
+                                    }
+                                ?>
+                            </select>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12 mb-4">
                         <div class="form-outline">
-                            <label class="form-label" for="dx">Dx</label>
-                            <input type="text" id="dx" name="dx" class="form-control" value="<?= (isset($data["dx"])) ? $data["dx"] : "" ?>" />
+                            <label class="form-label" for="dx">Dx <span class="color-red">*</span></label>
+                            <select required class="select form-control" id="dx" name="dx" required>
+                                <option value="">-- Seleccionar</option>
+                                <?php
+                                    if($tipo_dx){
+                                       foreach ($tipo_dx as $tec) {
+                                ?>
+                                        <option <?= (isset($data["dx"]) && $data["dx"] == $tec["codigo"]) ? "selected" : "" ?> value="<?= $tec["codigo"] ?>"><?= $tec["descripcion"] ?></option>
+                                <?php
+                                        }
+                                    }
+                                ?>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -92,8 +122,8 @@
                 <div class="row">
                     <div class="col-md-12 mb-4">
                         <div class="form-outline">
-                            <label class="form-label" for="cod-frecuencia">Observaciones</label>
-                            <textarea name="observacion" id="observacion" cols="30" rows="5" class="form-control"><?= (isset($data["observacion"])) ? $data["observacion"] : "" ?></textarea>
+                            <label class="form-label" for="cod-frecuencia">Observaciones <span class="color-red">*</span></label>
+                            <textarea required name="observacion" id="observacion" cols="30" rows="5" class="form-control"><?= (isset($data["observacion"])) ? $data["observacion"] : "" ?></textarea>
                         </div>
                     </div>
                 </div>

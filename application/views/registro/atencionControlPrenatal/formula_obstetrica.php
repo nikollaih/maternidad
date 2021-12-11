@@ -6,46 +6,46 @@
          <div class="row align-items-end mb-4">
             <div class="col">
                <div class="form-outline">
-                  <label class="form-label" for="gestacion">Gestacion</label>
-                  <input type="text" name="gestacion" id="gestacion" class="form-control" />
+                  <label class="form-label" for="gestacion">Gestacion <span class="color-red">*</span></label>
+                  <input required type="text" name="gestacion" id="gestacion" class="form-control" />
                </div>
             </div>
             <div class="col">
                <div class="form-outline">
-                  <label class="form-label" for="parto">Parto</label>
-                  <input type="text" name="parto" id="parto" class="form-control" />
+                  <label class="form-label" for="parto">Parto <span class="color-red">*</span></label>
+                  <input required type="text" name="parto" id="parto" class="form-control" />
                </div>
             </div>
             <div class="col">
                <div class="form-outline">
-                  <label class="form-label" for="cesarea">Cesarea</label>
-                  <input type="text" name="cesarea" id="cesarea" class="form-control" />
+                  <label class="form-label" for="cesarea">Cesarea <span class="color-red">*</span></label>
+                  <input required type="text" name="cesarea" id="cesarea" class="form-control" />
                </div>
             </div>
          </div>
          <div class="row align-items-end mb-4">
             <div class="col">
                <div class="form-outline">
-                  <label class="form-label" for="aborto">Aborto</label>
-                  <input type="text" name="aborto" id="aborto" class="form-control" />
+                  <label class="form-label" for="aborto">Aborto <span class="color-red">*</span></label>
+                  <input required type="text" name="aborto" id="aborto" class="form-control" />
                </div>
             </div>
             <div class="col">
                <div class="form-outline">
-                  <label class="form-label" for="mortinatos">Mortinatos</label>
-                  <input type="text" name="mortinatos" id="mortinatos" class="form-control" />
+                  <label class="form-label" for="mortinatos">Mortinatos <span class="color-red">*</span></label>
+                  <input required type="text" name="mortinatos" id="mortinatos" class="form-control" />
                </div>
             </div>
             <div class="col">
                <div class="form-outline">
-                  <label class="form-label" for="vivos">Vivos</label>
-                  <input type="text" name="vivos" id="vivos" class="form-control" />
+                  <label class="form-label" for="vivos">Vivos <span class="color-red">*</span></label>
+                  <input required type="text" name="vivos" id="vivos" class="form-control" />
                </div>
             </div>
             <div class="col">
                <div class="form-outline">
-                  <label class="form-label" for="interginesico">Periodo interginesico (flup)</label>
-                  <input type="text" name="interginesico" id="interginesico" class="form-control" />
+                  <label class="form-label" for="interginesico">Periodo interginesico (flup) <span class="color-red">*</span></label>
+                  <input required type="text" name="interginesico" id="interginesico" class="form-control" />
                </div>
             </div>
          </div>

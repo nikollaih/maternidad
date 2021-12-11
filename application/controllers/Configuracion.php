@@ -24,7 +24,8 @@ class Configuracion extends Application_Controller {
 		array('nombre' => 'Tipos de parto','tabla' => 'cfg_tipo_parto'),
 		array('nombre' => 'Vacunas','tabla' => 'cfg_vacunas'),
 		array('nombre' => 'Zonas','tabla' => 'cfg_zona'),
-		array('nombre' => 'Ingreso tadío','tabla' => 'cfg_tardio')
+		array('nombre' => 'Estado de conciencia','tabla' => 'cfg_estado_conciencia'),
+		array('nombre' => 'Dx','tabla' => 'cfg_dx')
 	);
 
     function __construct()
@@ -63,7 +64,7 @@ class Configuracion extends Application_Controller {
 			$this->Configuracion_Model->create($info, $tableName);
 		}
 		
-		header('Location: '.base_url().'Configuracion/listar?id='.$url);
+		header('Location: '.base_url().'Configuracion/listar/'.$url);
 	}
 
 	public function insertarParaclinico(){
@@ -84,7 +85,7 @@ class Configuracion extends Application_Controller {
 		$url = $this->input->post()['url'];
 		$result = $this->Configuracion_Model->delete($code, $tableName);
 		
-		header('Location: '.base_url().'Configuracion/listar?id='.$url);
+		header('Location: '.base_url().'Configuracion/listar/'.$url);
 	}
 
 	public function eliminarParaclinico(){
