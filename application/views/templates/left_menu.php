@@ -58,7 +58,13 @@
                             <a href="<?= base_url() ?>Configuracion/listar/0" data-key="t-login">Discapacidades</a>
                         </li>
                         <li>
+                            <a href="<?= base_url() ?>Configuracion/listar/21" data-key="t-login">Dx</a>
+                        </li>
+                        <li>
                             <a href="<?= base_url() ?>Configuracion/listar/1" data-key="t-login">Eps</a>
+                        </li>
+                        <li>
+                            <a href="<?= base_url() ?>Configuracion/listar/20" data-key="t-login">Estado de conciencia</a>
                         </li>
                         <li>
                             <a href="<?= base_url() ?>Configuracion/listar/6" data-key="t-login">Interconsultas</a>

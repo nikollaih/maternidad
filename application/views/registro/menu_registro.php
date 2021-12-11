@@ -30,10 +30,11 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="<?= base_url() ?>AtencionControlPrenatal/controlMensual/<?= $id ?>">Control Mensual</a>
-                    <a class="dropdown-item" href="<?= base_url() ?>AtencionControlPrenatal/controlPrenatal/<?= $id ?>">Control Prenatal</a>
+                    <a class="dropdown-item" href="<?= base_url() ?>AtencionControlPrenatal/controlPrenatal/<?= $id ?>">Control Prenatal de Ingreso</a>
                     <a class="dropdown-item" href="<?= base_url() ?>AtencionControlPrenatal/formulaObstetrica/<?= $id ?>">Formula Obstetrica</a>
                     <a class="dropdown-item" href="<?= base_url() ?>AtencionControlPrenatal/otrasConsultas/<?= $id ?>">Otras Consultas</a>
                     <a class="dropdown-item" href="<?= base_url() ?>AtencionControlPrenatal/paraclinicos/<?= $id ?>">Paraclinicos</a>
+                    <a class="dropdown-item" href="<?= base_url() ?>AtencionControlPrenatal/riesgos/<?= $id ?>">Riesgos</a>
                     <a class="dropdown-item" href="<?= base_url() ?>AtencionControlPrenatal/sustanciasPsicoactivas/<?= $id ?>">Sustancias Psicoactivas</a>
                     <a class="dropdown-item" href="<?= base_url() ?>AtencionControlPrenatal/vacunacion/<?= $id ?>">Vacunacion</a>
                 </div>

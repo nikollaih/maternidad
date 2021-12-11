@@ -7,7 +7,7 @@ Class Paraclinicos_Model extends CI_Model {
 
     // Get the complete items listing
     public function get_all($paciente){
-        $this->db->select("p.*, cp.nombre as paraclinico, cp.minimo, cp.maximo");
+        $this->db->select("p.*, cp.descripcion as paraclinico, cp.minimo, cp.maximo");
         $this->db->from("paraclinicos p");
         $this->db->join("cfg_paraclinicos cp", "p.tipo = cp.codigo", "left outer");
         $this->db->where("id_paciente", $paciente);

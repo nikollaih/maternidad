@@ -8,8 +8,8 @@
                <div class="row align-items-end mb-4">
                     <div class="col">
                         <div class="form-outline">
-                            <label class="form-label" for="codigo_consulta">Tipo de consulta</label>
-                            <select class="select form-control" id="codigo_consulta" name="codigo_consulta">
+                            <label class="form-label" for="codigo_consulta">Tipo de consulta <span class="color-red">*</span></label>
+                            <select required class="select form-control" id="codigo_consulta" name="codigo_consulta">
                                 <option value="">-- Seleccionar</option>
                                 <?php
                                     if($tipo_consultas){
@@ -25,22 +25,33 @@
                     </div>
                     <div class="col">
                         <div class="form-outline">
-                            <label class="form-label" for="fecha_consulta">Fecha consulta</label>
-                            <input type="date" id="fecha_consulta" name="fecha_consulta" class="form-control" value="<?= (isset($data["fecha_consulta"])) ? $data["fecha_consulta"] : "" ?>" />
+                            <label class="form-label" for="fecha_consulta">Fecha consulta <span class="color-red">*</span></label>
+                            <input required type="date" id="fecha_consulta" name="fecha_consulta" class="form-control" value="<?= (isset($data["fecha_consulta"])) ? $data["fecha_consulta"] : "" ?>" />
                         </div>
                     </div>
                     <div class="col">
                         <div class="form-outline">
-                            <label class="form-label" for="dx">Dx</label>
-                            <input type="text" id="dx" name="dx" class="form-control" value="<?= (isset($data["dx"])) ? $data["dx"] : "" ?>" />
+                            <label class="form-label" for="dx">Dx <span class="color-red">*</span></label>
+                            <select required required class="select form-control" id="dx" name="dx" required>
+                                <option value="">-- Seleccionar</option>
+                                <?php
+                                    if($tipo_dx){
+                                       foreach ($tipo_dx as $tec) {
+                                ?>
+                                        <option <?= (isset($data["dx"]) && $data["dx"] == $tec["codigo"]) ? "selected" : "" ?> value="<?= $tec["codigo"] ?>"><?= $tec["descripcion"] ?></option>
+                                <?php
+                                        }
+                                    }
+                                ?>
+                            </select>
                         </div>
                     </div>
                 </div>
                 <div class="row mb-4">
                     <div class="col">
                         <div class="form-outline">
-                            <label class="form-label" for="cod-frecuencia">Observaciones</label>
-                            <textarea name="observacion" id="observacion" cols="30" rows="5" class="form-control"><?= (isset($data["observacion"])) ? $data["observacion"] : "" ?></textarea>
+                            <label class="form-label" for="cod-frecuencia">Observaciones <span class="color-red">*</span></label>
+                            <textarea required name="observacion" id="observacion" cols="30" rows="5" class="form-control"><?= (isset($data["observacion"])) ? $data["observacion"] : "" ?></textarea>
                         </div>
                     </div>
                 </div>

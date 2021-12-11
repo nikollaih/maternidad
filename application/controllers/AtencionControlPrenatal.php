@@ -350,7 +350,7 @@ class AtencionControlPrenatal extends Application_Controller {
 	function controlPrenatal($paciente = null){
         if($paciente){
             $params["title"] = "Atencion Control Prenatal";
-            $params["subtitle"] = "Control Prenatal";
+            $params["subtitle"] = "Control Prenatal de Ingreso";
 
             if($this->input->post()){
                 $data = $this->input->post();
@@ -444,6 +444,8 @@ class AtencionControlPrenatal extends Application_Controller {
 
             $form_params["id_paciente"] = $paciente;
             $form_params["mensuales"] = $this->Mensuales_Model->get_all($paciente);
+            $form_params["tipo_estados_conciencia"] = $this->Configuracion_Model->get("cfg_estado_conciencia");
+            $form_params["tipo_dx"] = $this->Configuracion_Model->get("cfg_dx");
             $params["formulario"] = $this->load->view("registro/atencionControlPrenatal/mensuales", $form_params, TRUE);
             $params['info_perfil'] = $this->Pacientes_Model->getProfile($paciente);
             $this->load_layout("registro/atencionControlPrenatal/template", $params);
@@ -525,7 +527,8 @@ class AtencionControlPrenatal extends Application_Controller {
 
             $form_params["id_paciente"] = $paciente;
             $form_params["otras_consultas"] = $this->Otras_Consultas_Model->get_all($paciente);
-            $form_params["tipo_consultas"] = $this->Configuracion_Model->get("cfg_otras_consultas");
+            $form_params["tipo_consultas"] = $this->Configuracion_Model->get("cfg_interconsulta");
+            $form_params["tipo_dx"] = $this->Configuracion_Model->get("cfg_dx");
             $params["formulario"] = $this->load->view("registro/atencionControlPrenatal/otras_consultas", $form_params, TRUE);
             $params['info_perfil'] = $this->Pacientes_Model->getProfile($paciente);
             $this->load_layout("registro/atencionControlPrenatal/template", $params);

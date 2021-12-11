@@ -81,3 +81,7 @@ select.form-control {
 .table {
     background-color: #fff;
 }
+
+.color-red {
+    color: red;
+}

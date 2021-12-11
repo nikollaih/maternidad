@@ -6,8 +6,8 @@
          <div class="row">
             <div class="col-md-3 col-sm-12 mb-4">
                <div class="form-outline">
-                  <label class="form-label" for="sexo">Sexo</label>
-                  <select name="sexo" id="sexo" class="select form-control">
+                  <label class="form-label" for="sexo">Sexo <span class="color-red">*</span></label>
+                  <select required name="sexo" id="sexo" class="select form-control">
                     <option value="">-- Seleccionar</option>
                     <?php
                         if($tipo_sexo){
@@ -23,80 +23,80 @@
             </div>
             <div class="col-md-3 col-sm-12 mb-4">
                <div class="form-outline">
-                  <label class="form-label" for="peso">Peso</label>
-                  <input type="number" id="peso" name="peso" class="form-control" />
+                  <label class="form-label" for="peso">Peso <span class="color-red">*</span></label>
+                  <input required type="number" id="peso" name="peso" class="form-control" />
                </div>
             </div>
             <div class="col-md-3 col-sm-12 mb-4">
                <div class="form-outline">
-                  <label class="form-label" for="talla">Talla</label>
-                  <input type="number" id="talla" name="talla" class="form-control" />
+                  <label class="form-label" for="talla">Talla <span class="color-red">*</span></label>
+                  <input required type="number" id="talla" name="talla" class="form-control" />
                </div>
             </div>
             <div class="col-md-3 col-sm-12 mb-4">
                <div class="form-outline">
-                  <label class="form-label" for="vacunas">Vacunas aplicadas al recien nacido(Bcg, hepatitis b)</label>
-                  <input type="text" id="vacunas" name="vacunas" class="form-control" />
-               </div>
-            </div>
-         </div>
-         <div class="row">
-            <div class="col-md-3 col-sm-12 mb-4">
-               <div class="form-outline">
-                  <label class="form-label" for="abdominal">Perimetro torácico - Perímetro abdominal</label>
-                  <input type="text" id="abdominal" name="abdominal" class="form-control" />
-               </div>
-            </div>
-            <div class="col-md-3 col-sm-12 mb-4">
-               <div class="form-outline">
-                  <label class="form-label" for="pinzamiento">Tiempo pinzamiento del cordon umbilical para h.i.v</label>
-                  <input type="text" id="pinzamiento" name="pinzamiento" class="form-control" />
-               </div>
-            </div>
-            <div class="col-md-3 col-sm-12 mb-4">
-               <div class="form-outline">
-                  <label class="form-label" for="min5">Apagar a los 5 minutos</label>
-                  <input type="text" id="min5" name="min5" class="form-control" />
-               </div>
-            </div>
-            <div class="col-md-3 col-sm-12 mb-4">
-               <div class="form-outline">
-                  <label class="form-label" for="min10">Apagar a los 10 minutos</label>
-                  <input type="text" id="min10" name="min10" class="form-control" />
+                  <label class="form-label" for="vacunas">Vacunas aplicadas al recien nacido(Bcg, hepatitis b) <span class="color-red">*</span></label>
+                  <input required type="text" id="vacunas" name="vacunas" class="form-control" />
                </div>
             </div>
          </div>
          <div class="row">
             <div class="col-md-3 col-sm-12 mb-4">
                <div class="form-outline">
-                  <label class="form-label" for="cefalico">Perimetro cefalico</label>
-                  <input type="text" id="cefalico" name="cefalico" class="form-control" />
+                  <label class="form-label" for="abdominal">Perimetro torácico - Perímetro abdominal <span class="color-red">*</span></label>
+                  <input required type="text" id="abdominal" name="abdominal" class="form-control" />
                </div>
             </div>
             <div class="col-md-3 col-sm-12 mb-4">
                <div class="form-outline">
-                  <label class="form-label" for="fec_tsh">Fecha reporte tsh</label>
-                  <input type="date" id="fec_tsh" name="fec_tsh" class="form-control" />
+                  <label class="form-label" for="pinzamiento">Tiempo pinzamiento del cordon umbilical para h.i.v <span class="color-red">*</span></label>
+                  <input required type="text" id="pinzamiento" name="pinzamiento" class="form-control" />
                </div>
             </div>
             <div class="col-md-3 col-sm-12 mb-4">
                <div class="form-outline">
-                  <label class="form-label" for="rep_tsh">Reporte tsh</label>
-                  <input type="text" id="rep_tsh" name="rep_tsh" class="form-control" />
+                  <label class="form-label" for="min5">Apagar a los 5 minutos <span class="color-red">*</span></label>
+                  <input required type="text" id="min5" name="min5" class="form-control" />
                </div>
             </div>
             <div class="col-md-3 col-sm-12 mb-4">
                <div class="form-outline">
-                  <label class="form-label" for="fecha">Fecha control recien nacido</label>
-                  <input type="date" id="fecha" name="fecha" class="form-control" />
+                  <label class="form-label" for="min10">Apagar a los 10 minutos <span class="color-red">*</span></label>
+                  <input required type="text" id="min10" name="min10" class="form-control" />
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-3 col-sm-12 mb-4">
+               <div class="form-outline">
+                  <label class="form-label" for="cefalico">Perimetro cefalico <span class="color-red">*</span></label>
+                  <input required type="text" id="cefalico" name="cefalico" class="form-control" />
+               </div>
+            </div>
+            <div class="col-md-3 col-sm-12 mb-4">
+               <div class="form-outline">
+                  <label class="form-label" for="fec_tsh">Fecha reporte tsh <span class="color-red">*</span></label>
+                  <input required type="date" id="fec_tsh" name="fec_tsh" class="form-control" />
+               </div>
+            </div>
+            <div class="col-md-3 col-sm-12 mb-4">
+               <div class="form-outline">
+                  <label class="form-label" for="rep_tsh">Reporte tsh <span class="color-red">*</span></label>
+                  <input required type="text" id="rep_tsh" name="rep_tsh" class="form-control" />
+               </div>
+            </div>
+            <div class="col-md-3 col-sm-12 mb-4">
+               <div class="form-outline">
+                  <label class="form-label" for="fecha">Fecha control recien nacido <span class="color-red">*</span></label>
+                  <input required type="date" id="fecha" name="fecha" class="form-control" />
                </div>
             </div>
          </div>
          <div class="row">
             <div class="col mb-4">
                 <div class="form-outline">
-                    <label class="form-label" for="cod-frecuencia">Observaciones</label>
-                    <textarea name="observacion" id="observacion" cols="30" rows="5" class="form-control"><?= (isset($data["observacion"])) ? $data["observacion"] : "" ?></textarea>
+                    <label class="form-label" for="cod-frecuencia">Observaciones <span class="color-red">*</span></label>
+                    <textarea required name="observacion" id="observacion" cols="30" rows="5" class="form-control"><?= (isset($data["observacion"])) ? $data["observacion"] : "" ?></textarea>
                 </div>
             </div>
         </div>

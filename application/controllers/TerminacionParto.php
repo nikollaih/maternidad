@@ -201,6 +201,7 @@ class TerminacionParto extends Application_Controller {
             $form_params["ips"] = $this->Configuracion_Model->get("cfg_ips");
             $form_params["formas"] = $this->Configuracion_Model->get("cfg_tipo_parto");
             $params["formulario"] = $this->load->view("registro/terminacionParto/atencion_parto", $form_params, TRUE);
+            $params['info_perfil'] = $this->Pacientes_Model->getProfile($paciente);
             $this->load_layout("registro/atencionControlPrenatal/template", $params);
         }
         else{

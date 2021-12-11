@@ -8,8 +8,8 @@
                <div class="row align-items-end mb-4">
                     <div class="col">
                         <div class="form-outline">
-                            <label class="form-label" for="prueba_embarazo">Prueba de embarazo</label>
-                            <select class="select form-control" id="prueba_embarazo" name="prueba_embarazo">
+                            <label class="form-label" for="prueba_embarazo">Prueba de embarazo <span class="color-red">*</span></label>
+                            <select required class="select form-control" id="prueba_embarazo" name="prueba_embarazo">
                                 <option value="">-- Seleccionar</option>
                                 <option value="1">Positiva</option>
                                 <option value="0">Negativa</option>
@@ -18,8 +18,8 @@
                     </div>
                     <div class="col">
                         <div class="form-outline">
-                            <label class="form-label" for="ingreso_tardio">Causa de ingreso tardio</label>
-                            <select class="select form-control" id="ingreso_tardio" name="ingreso_tardio">
+                            <label class="form-label" for="ingreso_tardio">Causa de ingreso tardio <span class="color-red">*</span></label>
+                            <select required class="select form-control" id="ingreso_tardio" name="ingreso_tardio">
                                 <option value="">-- Seleccionar</option>
                                 <?php
                                     if($tipo_tardio){
@@ -35,8 +35,8 @@
                     </div>
                     <div class="col">
                         <div class="form-outline">
-                            <label class="form-label" for="fecha_ingreso">Fecha ingreso</label>
-                            <input type="date" id="fecha_ingreso" name="fecha_ingreso" class="form-control" value="<?= (isset($data["fecha_ingreso"])) ? $data["fecha_ingreso"] : "" ?>" />
+                            <label class="form-label" for="fecha_ingreso">Fecha ingreso <span class="color-red">*</span></label>
+                            <input required type="date" id="fecha_ingreso" name="fecha_ingreso" class="form-control" value="<?= (isset($data["fecha_ingreso"])) ? $data["fecha_ingreso"] : "" ?>" />
                         </div>
                     </div>
                 </div>

@@ -8,8 +8,8 @@
                <div class="row">
                     <div class="col-md-4 col-sm-12 mb-4">
                         <div class="form-outline">
-                            <label class="form-label" for="forma">Forma de Terminación del Embarazo</label>
-                            <select class="select form-control" id="forma" name="forma">
+                            <label class="form-label" for="forma">Forma de Terminación del Embarazo <span class="color-red">*</span></label>
+                            <select required class="select form-control" id="forma" name="forma">
                                 <option value="">-- Seleccionar</option>
                                 <?php
                                     if($formas){
@@ -25,22 +25,22 @@
                     </div>
                     <div class="col-md-4 col-sm-12 mb-4">
                         <div class="form-outline">
-                            <label class="form-label" for="semanas">Semanas</label>
-                            <input type="number" id="semanas" name="semanas" class="form-control" value="<?= (isset($data["semanas"])) ? $data["semanas"] : "" ?>" />
+                            <label class="form-label" for="semanas">Semanas <span class="color-red">*</span></label>
+                            <input required type="number" id="semanas" name="semanas" class="form-control" value="<?= (isset($data["semanas"])) ? $data["semanas"] : "" ?>" />
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12 mb-4">
                         <div class="form-outline">
-                            <label class="form-label" for="fecha_parto">Fecha del parto</label>
-                            <input type="date" id="fecha_parto" name="fecha_parto" class="form-control" value="<?= (isset($data["pecha_parto"])) ? $data["pecha_parto"] : "" ?>" />
+                            <label class="form-label" for="fecha_parto">Fecha del parto <span class="color-red">*</span></label>
+                            <input required type="date" id="fecha_parto" name="fecha_parto" class="form-control" value="<?= (isset($data["pecha_parto"])) ? $data["pecha_parto"] : "" ?>" />
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-sm-12 mb-4">
                         <div class="form-outline">
-                            <label class="form-label" for="ips">Ips que atendió el parto(nivel primario, complementario)</label>
-                            <select class="select form-control" id="ips" name="ips">
+                            <label class="form-label" for="ips">Ips que atendió el parto(nivel primario, complementario) <span class="color-red">*</span></label>
+                            <select required class="select form-control" id="ips" name="ips">
                                 <option value="">-- Seleccionar</option>
                                 <?php
                                     if($ips){
@@ -56,8 +56,8 @@
                     </div>
                     <div class="col-md-6 col-sm-12 mb-4">
                         <div class="form-outline">
-                            <label class="form-label" for="planificacion">Suministro del método de planificación familiar post evento obstétrico (Antes del alta)</label>
-                            <select class="select form-control" id="planificacion" name="planificacion">
+                            <label class="form-label" for="planificacion">Suministro del método de planificación familiar post evento obstétrico (Antes del alta) <span class="color-red">*</span></label>
+                            <select required class="select form-control" id="planificacion" name="planificacion">
                                 <option value="">-- Seleccionar</option>
                                 <option value="1">Si</option>
                                 <option value="0">No</option>
@@ -68,8 +68,8 @@
                 <div class="row">
                     <div class="col-md-12 col-sm-12 mb-4">
                         <div class="form-outline">
-                            <label class="form-label" for="observacion">Observaciones</label>
-                            <textarea name="observacion" id="observacion" cols="30" rows="5" class="form-control"><?= (isset($data["observacion"])) ? $data["observacion"] : "" ?></textarea>
+                            <label class="form-label" for="observacion">Observaciones <span class="color-red">*</span></label>
+                            <textarea required name="observacion" id="observacion" cols="30" rows="5" class="form-control"><?= (isset($data["observacion"])) ? $data["observacion"] : "" ?></textarea>
                         </div>
                     </div>
                 </div>
