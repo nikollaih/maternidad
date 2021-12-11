@@ -12,9 +12,9 @@ abstract class Application_Controller extends CI_Controller {
 
 	public function load_layout($view, $params = null)
 	{
-		// if(!is_logged()){
-		// 	header("Location: " . base_url() . "usuarios/login");
-		// }
+		if(!is_logged()){
+		 	header("Location: " . base_url() . "Auth/login");
+		}
 
 		$data = array();
 		$data["view"] = $this->load->view($view, $params, true);

@@ -26,7 +26,7 @@
         <div class="row">
             <div class="col-md-6 col-sm-12">
                 <div class="card">
-                    <div class="card-header">Estadistica 2</div>
+                    <div class="card-header">Datos importantes</div>
                     <div class="card-body">
                         <table class="table table-bordered">
                             <thead>
@@ -55,7 +55,7 @@
             </div>
             <div class="col-md-6 col-sm-12">
                 <div class="card">
-                    <div class="card-header">Activas vs Asistentes</div>
+                    <div class="card-header">Madres por municipio</div>
                     <div class="card-body">
                         <canvas id="registradas_activas" width="400" height="400"></canvas>
                     </div>
@@ -65,7 +65,6 @@
    </div>
    <!-- container-fluid -->
 </div>
-
 <script>
     jQuery(document).ready(function(){
         const ingresos_mes = document.getElementById('ingresos_mes').getContext('2d');
@@ -74,10 +73,10 @@
         const IngresosMes = new Chart(ingresos_mes, {
             type: 'line',
             data: {
-                labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio ", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
                 datasets: [{
-                    label: 'Ingresos por mes',
-                    data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
+                    label: 'Madres por municipio',
+                    data: [0,0,1,0,1,0,2,0,0,0,0,0],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
@@ -121,19 +120,39 @@
 
 
         const RegistradasActivas = new Chart(registradas_activas, {
-            type: 'doughnut',
+            type: 'pie',
             data: {
-                labels: ["Activas", "Asistentes"],
+                labels: [<?=$bar['labels']?>],
                 datasets: [{
                     label: 'Ingresos por mes',
-                    data: [30, 14],
+                    data: [<?=$bar['data']?>],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)'
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
                     ],
                     borderColor: [
                         'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)'
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
                     ],
                     borderWidth: 1
                 }]

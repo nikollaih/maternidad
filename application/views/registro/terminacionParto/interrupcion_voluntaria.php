@@ -7,8 +7,8 @@
          <div class="row ">
                <div class="col-md-4 col-sm-12 mb-4">
                   <div class="form-outline">
-                        <label class="form-label" for="dimension">Dimensión</label>
-                        <select class="select form-control" id="dimension" name="dimension">
+                        <label class="form-label" for="dimension">Dimensión <span class="color-red">*</span></label>
+                        <select required class="select form-control" id="dimension" name="dimension">
                            <option value="">-- Seleccionar</option>
                            <?php
                               if($tipo_dimensiones){
@@ -24,8 +24,8 @@
                </div>
                <div class="col-md-4 col-sm-12 mb-4">
                   <div class="form-outline">
-                        <label class="form-label" for="causal">Causales</label>
-                        <select class="select form-control" id="causal" name="causal">
+                        <label class="form-label" for="causal">Causales <span class="color-red">*</span></label>
+                        <select required class="select form-control" id="causal" name="causal">
                            <option value="">-- Seleccionar</option>
                            <?php
                               if($tipo_causales){
@@ -41,16 +41,16 @@
                </div>
                <div class="col-md-4 col-sm-12">
                         <div class="form-outline">
-                            <label class="form-label" for="ultimo-consumo">Fecha</label>
-                            <input type="date" id="fecha" name="fecha" class="form-control" value="<?= (isset($data["fecha"])) ? $data["fecha"] : "" ?>" />
+                            <label class="form-label" for="ultimo-consumo">Fecha <span class="color-red">*</span></label>
+                            <input required type="date" id="fecha" name="fecha" class="form-control" value="<?= (isset($data["fecha"])) ? $data["fecha"] : "" ?>" />
                         </div>
                     </div>
             </div>
             <div class="row">
                     <div class="col mb-4">
                         <div class="form-outline">
-                            <label class="form-label" for="cod-frecuencia">Observaciones</label>
-                            <textarea name="observacion" id="observacion" cols="30" rows="5" class="form-control"><?= (isset($data["observacion"])) ? $data["observacion"] : "" ?></textarea>
+                            <label class="form-label" for="cod-frecuencia">Observaciones <span class="color-red">*</span></label>
+                            <textarea required name="observacion" id="observacion" cols="30" rows="5" class="form-control"><?= (isset($data["observacion"])) ? $data["observacion"] : "" ?></textarea>
                         </div>
                     </div>
                 </div>

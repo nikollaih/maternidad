@@ -12,83 +12,122 @@
                         <span data-key="t-dashboard">Inicio</span>
                     </a>
                 </li>
-
-                <li class="">
-                    <a href="javascript: void(0);" class="has-arrow" aria-expanded="false">
-                    <i class="fas fa-cogs"></i>
-                        <span data-key="t-authentication">Configuraciones</span>
+                <li>
+                    <a href="<?= base_url() ?>DatosBasicos/creacion">
+                        <i class="fas fa-user-plus"></i>
+                        <span data-key="t-dashboard">Nueva madre</span>
                     </a>
-                    <ul class="sub-menu mm-collapse" aria-expanded="false" style="height: 0px;">
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow" aria-expanded="true">
+                        <i class="fas fa-cogs"></i>
+                        <span data-key="t-authentication">Cfg básica</span>
+                    </a>
+                    <ul class="sub-menu mm-collapse" aria-expanded="false" style="">
                         <li>
-                            <a href="<?= base_url() ?>Configuracion/listar?id=0" data-key="t-login">Discapacidades</a>
+                            <a href="<?= base_url() ?>Configuracion/listar/2" data-key="t-login">Estados</a>
                         </li>
                         <li>
-                            <a href="<?= base_url() ?>Configuracion/listar?id=1" data-key="t-login">Eps</a>
+                            <a href="<?= base_url() ?>Configuracion/listar/3" data-key="t-login">Etnias</a>
                         </li>
                         <li>
-                            <a href="<?= base_url() ?>Configuracion/listar?id=2" data-key="t-login">Estados</a>
+                            <a href="<?= base_url() ?>Configuracion/listar/5" data-key="t-login">Genero</a>
                         </li>
                         <li>
-                            <a href="<?= base_url() ?>Configuracion/listar?id=3" data-key="t-login">Etnias</a>
+                            <a href="<?= base_url() ?>Configuracion/listar/9" data-key="t-login">Municipios</a>
                         </li>
                         <li>
-                            <a href="<?= base_url() ?>Configuracion/listar?id=4" data-key="t-login">Frecuencias de consumo</a>
+                            <a href="<?= base_url() ?>Configuracion/listar/11" data-key="t-login">Nivel Educativo</a>
                         </li>
                         <li>
-                            <a href="<?= base_url() ?>Configuracion/listar?id=5" data-key="t-login">Genero</a>
+                            <a href="<?= base_url() ?>Configuracion/listar/16" data-key="t-login">Tipos de documentos</a>
                         </li>
                         <li>
-                            <a href="<?= base_url() ?>Configuracion/listar?id=6" data-key="t-login">Interconsultas</a>
+                            <a href="<?= base_url() ?>Configuracion/listar/19" data-key="t-login">Zonas</a>
+                        </li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow" aria-expanded="true">
+                        <i class="fas fa-cogs"></i>
+                        <span data-key="t-authentication">Cfg específica</span>
+                    </a>
+                    <ul class="sub-menu mm-collapse" aria-expanded="false" style="">
+                        <li>
+                            <a href="<?= base_url() ?>Configuracion/listar/0" data-key="t-login">Discapacidades</a>
                         </li>
                         <li>
-                            <a href="<?= base_url() ?>Configuracion/listar?id=7" data-key="t-login">Ips</a>
+                            <a href="<?= base_url() ?>Configuracion/listar/21" data-key="t-login">Dx</a>
                         </li>
                         <li>
-                            <a href="<?= base_url() ?>Configuracion/listar?id=8" data-key="t-login">Tipos de Spa</a>
+                            <a href="<?= base_url() ?>Configuracion/listar/1" data-key="t-login">Eps</a>
                         </li>
                         <li>
-                            <a href="<?= base_url() ?>Configuracion/listar?id=9" data-key="t-login">Municipios</a>
+                            <a href="<?= base_url() ?>Configuracion/listar/20" data-key="t-login">Estado de conciencia</a>
                         </li>
                         <li>
-                            <a href="<?= base_url() ?>Configuracion/listar?id=10" data-key="t-login">Métodos de planificación</a>
+                            <a href="<?= base_url() ?>Configuracion/listar/6" data-key="t-login">Interconsultas</a>
                         </li>
                         <li>
-                            <a href="<?= base_url() ?>Configuracion/listar?id=11" data-key="t-login">Nivel Educativo</a>
+                            <a href="<?= base_url() ?>Configuracion/listar/20" data-key="t-login">Ingreso tardío</a>
                         </li>
                         <li>
-                            <a href="<?= base_url() ?>Configuracion/listar?id=12" data-key="t-login">Poblaciones</a>
+                            <a href="<?= base_url() ?>Configuracion/listar/7" data-key="t-login">Ips</a>
                         </li>
                         <li>
-                            <a href="<?= base_url() ?>Configuracion/listar?id=13" data-key="t-login">Regimenes</a>
+                            <a href="<?= base_url() ?>Configuracion/listar/10" data-key="t-login">Métodos de planificación</a>
                         </li>
                         <li>
-                            <a href="<?= base_url() ?>Configuracion/listar?id=14" data-key="t-login">Resultados</a>
+                            <a href="javascript: void(0);" class="has-arrow" data-key="t-level-1-2">Paraclínicos</a>
+                            <ul class="sub-menu mm-collapse" aria-expanded="true">
+                                <li>
+                                    <a href="<?= base_url() ?>Configuracion/listar/14" data-key="t-level-2-1">Resultados</a>
+                                </li>
+                                <li>
+                                    <a href="<?= base_url() ?>Configuracion/paraclinicos" data-key="t-level-2-1">Tipos de paraclinicos</a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
-                            <a href="<?= base_url() ?>Configuracion/listar?id=15" data-key="t-login">Riesgos</a>
+                            <a href="<?= base_url() ?>Configuracion/listar/12" data-key="t-login">Poblaciones</a>
                         </li>
                         <li>
-                            <a href="<?= base_url() ?>Configuracion/listar?id=16" data-key="t-login">Tipos de documentos</a>
+                            <a href="<?= base_url() ?>Configuracion/listar/13" data-key="t-login">Regimenes</a>
                         </li>
                         <li>
-                            <a href="<?= base_url() ?>Configuracion/listar?id=17" data-key="t-login">Tipos de parto</a>
+                            <a href="<?= base_url() ?>Configuracion/listar/15" data-key="t-login">Riesgos</a>
                         </li>
                         <li>
-                            <a href="<?= base_url() ?>Configuracion/listar?id=18" data-key="t-login">Vacunas</a>
+                            <a href="javascript: void(0);" class="has-arrow" data-key="t-level-1-2">SPA</a>
+                            <ul class="sub-menu mm-collapse" aria-expanded="true">
+                                <li>
+                                    <a href="<?= base_url() ?>Configuracion/listar/4" data-key="t-login">Frecuencias de consumo</a>
+                                </li>
+                                <li>
+                                    <a href="<?= base_url() ?>Configuracion/listar/8" data-key="t-login">Tipos de Spa</a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
-                            <a href="<?= base_url() ?>Configuracion/listar?id=19" data-key="t-login">Zonas</a>
+                            <a href="javascript: void(0);" class="has-arrow" data-key="t-level-1-2">Terminación embarazo</a>
+                            <ul class="sub-menu mm-collapse" aria-expanded="true">
+                                <li>
+                                    <a href="<?= base_url() ?>Configuracion/listar/17" data-key="t-login">Tipos de parto</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="<?= base_url() ?>Configuracion/listar/18" data-key="t-login">Vacunas</a>
                         </li>
                     </ul>
                 </li>
-
                 <li>
                     <a href="<?= base_url() ?>Estadisticas">
                         <i class="fas fa-chart-pie"></i>
                         <span data-key="t-dashboard">Estadisticas</span>
                     </a>
                 </li>
-
                 <!-- Invitados -->
             </ul>
         </div>

@@ -53,6 +53,16 @@ jQuery(document).on("click", ".delete-recien-nacido", function() {
     delete_row(id, "TerminacionParto/delete_recien_nacido", 'El registro será eliminado!');
 });
 
+jQuery(document).on("click", ".delete-atencion-parto", function() {
+    let id = jQuery(this).attr("data-id");
+    delete_row(id, "TerminacionParto/delete_atencion_parto", 'El registro será eliminado!');
+});
+
+jQuery(document).on("click", ".delete-control-recien-nacido-madre", function() {
+    let id = jQuery(this).attr("data-id");
+    delete_row(id, "TerminacionParto/delete_control_recien_nacido_madre", 'El control será eliminado!');
+});
+
 function delete_row(id, url, text) {
     swal({
             title: '¿Estás seguro?',

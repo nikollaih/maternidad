@@ -4,15 +4,18 @@
     </div>
     <div class="card-body">
         <form action="" method="post">
+            <input type="hidden" value="<?=$id_paciente?>" id="id" name="id">
             <div class="row align-items-end mb-4">
             <div class="col">
                 <div class="form-outline">
-                    <label class="form-label" for="form6Example1">Tipo de documento</label>
-                    <select class="select form-control">
+                    <label class="form-label" for="tipodoc">Tipo de documento <span class="color-red">*</span></label>
+                    <select required class="select form-control" id="tipodoc" name="tipodoc">
                         <?php
                             for ($i=0; $i < count($tipo_doc); $i++) { 
                         ?>
-                        <option value="<?=$tipo_doc[$i]['codigo']?>"><?=$tipo_doc[$i]['descripcion']?></option>
+                        <option value="<?=$tipo_doc[$i]['codigo']?>" <?=( $tipo_doc[$i]['codigo'] == $info_paciente[0]['tipodoc'] ? 'selected="selected"' : '' )?>>
+                            <?=$tipo_doc[$i]['descripcion']?>
+                        </option>
                         <?php
                             }
                         ?>
@@ -21,8 +24,8 @@
             </div>
             <div class="col">
                 <div class="form-outline">
-                    <label class="form-label" for="form6Example2">Número de documento</label>
-                    <input type="text" id="form6Example2" class="form-control" />
+                    <label class="form-label" for="numero_documento">Número de documento <span class="color-red">*</span></label>
+                    <input required type="text" id="numero_documento" name="numero_documento" class="form-control" value="<?=$info_paciente[0]['numero_documento']?>"/>
                 </div>
             </div>
             </div>
@@ -30,26 +33,28 @@
             <div class="row align-items-end mb-4">
             <div class="col">
                 <div class="form-outline">
-                    <label class="form-label" for="form6Example1">Nombres</label>
-                    <input type="text" id="form6Example1" class="form-control" />
+                    <label class="form-label" for="nombres">Nombres <span class="color-red">*</span></label>
+                    <input required type="text" id="nombres" name="nombres" class="form-control" value="<?=$info_paciente[0]['nombres']?>"/>
                 </div>
             </div>
             <div class="col">
                 <div class="form-outline">
-                    <label class="form-label" for="form6Example2">Apellidos</label>
-                    <input type="text" id="form6Example2" class="form-control" />
+                    <label class="form-label" for="apelidos">Apellidos <span class="color-red">*</span></label>
+                    <input required type="text" id="apellidos" name="apellidos" class="form-control" value="<?=$info_paciente[0]['apellidos']?>"/>
                 </div>
             </div>
             </div>
             <div class="row align-items-end mb-4">
             <div class="col">
                 <div class="form-outline">
-                    <label class="form-label" for="form6Example1">Sexo</label>
-                    <select class="select form-control">
+                    <label class="form-label" for="sexo">Sexo <span class="color-red">*</span></label>
+                    <select required class="select form-control" id="sexo" name="sexo">
                         <?php
-                            for ($a=0; $a < count($sexos); $a++) { 
+                            for ($i=0; $i < count($sexos); $i++) { 
                         ?>
-                        <option value="<?=$sexos[$a]['codigo']?>"><?=$sexos[$a]['descripcion']?></option>
+                        <option value="<?=$sexos[$i]['codigo']?>" <?=( $sexos[$i]['codigo'] == $info_paciente[0]['sexo'] ? 'selected="selected"' : '' )?>>
+                            <?=$sexos[$i]['descripcion']?>
+                        </option>
                         <?php
                             }
                         ?>
@@ -58,12 +63,14 @@
             </div>
             <div class="col">
                 <div class="form-outline">
-                    <label class="form-label" for="form6Example1">Genero</label>
-                    <select class="select form-control">
+                    <label class="form-label" for="genero">Genero <span class="color-red">*</span></label>
+                    <select required class="select form-control" id="genero" name="genero">
                         <?php
-                            for ($a=0; $a < count($generos); $a++) { 
+                            for ($i=0; $i < count($generos); $i++) { 
                         ?>
-                        <option value="<?=$generos[$a]['codigo']?>"><?=$generos[$a]['descripcion']?></option>
+                        <option value="<?=$generos[$i]['codigo']?>" <?=( $generos[$i]['codigo'] == $info_paciente[0]['genero'] ? 'selected="selected"' : '' )?>>
+                            <?=$generos[$i]['descripcion']?>
+                        </option>
                         <?php
                             }
                         ?>
@@ -74,31 +81,16 @@
             <div class="row align-items-end mb-4">
             <div class="col">
                 <div class="form-outline">
-                    <label class="form-label" for="form6Example1">Fecha de nacimiento</label>
-                    <input type="date" id="form6Example3" class="form-control" />
+                    <label class="form-label" for="fecha_nac">Fecha de nacimiento <span class="color-red">*</span></label>
+                    <input required type="date" id="fecha_nac" name="fecha_nac" class="form-control" value="<?=$info_paciente[0]['fecha_nac']?>"/>
                 </div>
             </div>
             <div class="col">
                 <!-- Text input -->
                 <!-- Text input -->
                 <div class="form-outline">
-                    <label class="form-label" for="form6Example3">Edad</label>
-                    <input type="number" id="form6Example3" class="form-control" />
-                </div>
-            </div>
-            </div>
-            <div class="row align-items-end mb-4">
-            <div class="col">
-                <!-- Text input -->
-                <div class="form-outline mb-4">
-                    <label class="form-label" for="form6Example4">Telefono</label>
-                    <input type="text" id="form6Example4" class="form-control" />
-                </div>
-            </div>
-            <div class="col">
-                <div class="form-outline mb-4">
-                    <label class="form-label" for="form6Example5">Email</label>
-                    <input type="email" id="form6Example5" class="form-control" />
+                    <label class="form-label" for="telefono">Telefono <span class="color-red">*</span></label>
+                    <input required type="number" id="telefono" name="telefono" class="form-control" value="<?=$info_paciente[0]['telefono']?>"/>
                 </div>
             </div>
             </div>

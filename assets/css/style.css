@@ -42,7 +42,7 @@ select.form-control {
 
 .tag {
     text-align: center;
-    padding: 5px;
+    padding: 5px 10px;
     background: #e9e9ef;
     border-radius: 0.25rem;
     display: block;
@@ -80,4 +80,8 @@ select.form-control {
 
 .table {
     background-color: #fff;
+}
+
+.color-red {
+    color: red;
 }

@@ -6,8 +6,8 @@
          <div class="row align-items-end mb-4">
                <div class="col">
                   <div class="form-outline">
-                        <label class="form-label" for="cod-vacuna">Vacuna *</label>
-                        <select data-class="vacunacion-show-other" class="select form-control select-toggle" id="cod-vacuna" name="cod_vacuna">
+                        <label class="form-label" for="cod-vacuna">Vacuna <span class="color-red">*</span></label>
+                        <select required data-class="vacunacion-show-other" class="select form-control select-toggle" id="cod-vacuna" name="cod_vacuna">
                            <option value="">-- Seleccionar</option>
                            <?php
                               if($tipo_vacunas){
@@ -24,20 +24,20 @@
                </div>
                <div class="col vacunacion-show-other d-none">
                   <div class="form-outline">
-                        <label class="form-label" for="otra-vacuna">Nombre vacuna</label>
+                        <label class="form-label" for="otra-vacuna">Nombre vacuna <span class="color-red">*</span></label>
                         <input type="text" id="otra-vacuna" name="otra_vacuna" class="form-control" value="<?= (isset($data["otra_vacuna"])) ? $data["otra_vacuna"] : "" ?>" />
                   </div>
                </div>
                <div class="col">
                   <div class="form-outline">
-                        <label class="form-label" for="numero-dosis">Dósis # *</label>
-                        <input type="number" id="numero-dosis" name="numero_dosis" class="form-control" value="<?= (isset($data["numero_dosis"])) ? $data["numero_dosis"] : "" ?>" />
+                        <label class="form-label" for="numero-dosis">Dósis # <span class="color-red">*</span></label>
+                        <input required type="number" id="numero-dosis" name="numero_dosis" class="form-control" value="<?= (isset($data["numero_dosis"])) ? $data["numero_dosis"] : "" ?>" />
                   </div>
                </div>
                <div class="col">
                   <div class="form-outline">
-                        <label class="form-label" for="fecha-vacunacion">Fecha vacunación *</label>
-                        <input type="date" id="fecha-vacunacion" name="fecha_vacunacion" class="form-control" value="<?= (isset($data["fecha_vacunacion"])) ? $data["fecha_vacunacion"] : "" ?>" />
+                        <label class="form-label" for="fecha-vacunacion">Fecha vacunación <span class="color-red">*</span></label>
+                        <input required type="date" id="fecha-vacunacion" name="fecha_vacunacion" class="form-control" value="<?= (isset($data["fecha_vacunacion"])) ? $data["fecha_vacunacion"] : "" ?>" />
                   </div>
                </div>
             </div>

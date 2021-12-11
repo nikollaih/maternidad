@@ -16,8 +16,9 @@ class Auth extends Application_Controller {
 	}
 
 	public function login(){
+		$params=[];
         if(is_logged()){
-            header('Location: '.base_url()."Asignaciones");
+            header('Location: '.base_url());
 			die();
         }
 
@@ -38,9 +39,7 @@ class Auth extends Application_Controller {
             }
 		}
 
-		$params["title"] = "Mezclas";
-        $params["subtitle"] = "Mezclas";
-        $this->load_layout("generales/auth/login", $params);
+        $this->load->view("generales/auth/login", $params);
 	}
 
 
@@ -49,11 +48,8 @@ class Auth extends Application_Controller {
 		$user = $this->Usuarios_Model->login($data["usuario"], $data["password"]);
 		$redirect = "Asignaciones";
 		if($user){
-			if($user["rol"] == "Estudiante"){
-				$redirect = "Areas";
-			}
 			$this->session->set_userdata("logged_in", $user);
-			header('Location: '.base_url().$redirect);
+			header('Location: '.base_url());
 			die();
 		}
 		else{
@@ -63,7 +59,7 @@ class Auth extends Application_Controller {
 
     function do_logout(){
         $this->session->unset_userdata('logged_in');
-        header('Location: '.base_url());
+        header('Location: '.base_url().'Auth/login');
 		die();
     }
 }
