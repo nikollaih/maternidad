@@ -5,7 +5,7 @@
             <div class="navbar-brand-box">
                 <a href="<?= base_url() ?>" class="logo logo-dark">
                     <span class="logo-sm">
-                        Maternidad
+                        Mat.
                     </span>
                     <span class="logo-lg">
                         Maternidad    
@@ -14,7 +14,7 @@
 
                 <a href="<?= base_url() ?>" class="logo logo-light">
                     <span class="logo-sm">
-                        Maternidad
+                        Mat.
                     </span>
                     <span class="logo-lg">
                     Maternidad
