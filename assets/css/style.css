@@ -2,6 +2,10 @@ html {
     background: #fbfaff;
 }
 
+body{
+    background-color: #fbfaff;
+}
+
 .vertical-menu {
     background-color: #fff !important;
 }
