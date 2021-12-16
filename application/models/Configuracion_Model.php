@@ -24,10 +24,10 @@ Class Configuracion_Model extends CI_Model {
         return ($result->num_rows() > 0) ? $result->result_array() : false;
     }
     // Update an specific type
-    public function update($data){
+    public function update($data, $tableName){
         $this->db->where('codigo', $data['codigo']);
-        $this->db->update('cfg_tipodoc', $data);
-        return $this->get("cfg_tipodoc");
+        $this->db->update($tableName, $data);
+        return $this->get($tableName);
     }
 
     // Delete a document type

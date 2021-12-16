@@ -58,7 +58,7 @@
                             <a href="<?= base_url() ?>Configuracion/listar/0" data-key="t-login">Discapacidades</a>
                         </li>
                         <li>
-                            <a href="<?= base_url() ?>Configuracion/listar/21" data-key="t-login">Dx</a>
+                            <a href="<?= base_url() ?>Configuracion/listar/21" data-key="t-login">Diagnóstico</a>
                         </li>
                         <li>
                             <a href="<?= base_url() ?>Configuracion/listar/1" data-key="t-login">Eps</a>

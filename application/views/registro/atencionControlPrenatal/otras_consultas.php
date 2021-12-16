@@ -5,8 +5,8 @@
          <div class="card-body">
             <form action="" method="post">
                <input type="hidden" name="id_paciente" value="<?= $id_paciente ?>">
-               <div class="row align-items-end mb-4">
-                    <div class="col">
+               <div class="row align-items-end">
+                    <div class="col-md-6 col-sm-12 mb-4">
                         <div class="form-outline">
                             <label class="form-label" for="codigo_consulta">Tipo de consulta <span class="color-red">*</span></label>
                             <select required class="select form-control" id="codigo_consulta" name="codigo_consulta">
@@ -23,13 +23,16 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-md-6 col-sm-12 mb-4">
                         <div class="form-outline">
                             <label class="form-label" for="fecha_consulta">Fecha consulta <span class="color-red">*</span></label>
                             <input required type="date" id="fecha_consulta" name="fecha_consulta" class="form-control" value="<?= (isset($data["fecha_consulta"])) ? $data["fecha_consulta"] : "" ?>" />
                         </div>
                     </div>
-                    <div class="col">
+                </div>
+
+               <div class="row">
+                  <div class="col-md-12 mb-4">
                         <div class="form-outline">
                             <label class="form-label" for="dx">Dx <span class="color-red">*</span></label>
                             <select required required class="select form-control" id="dx" name="dx" required>
@@ -46,9 +49,10 @@
                             </select>
                         </div>
                     </div>
-                </div>
-                <div class="row mb-4">
-                    <div class="col">
+               </div>
+
+                <div class="row">
+                    <div class="col-md-12 mb-4">
                         <div class="form-outline">
                             <label class="form-label" for="cod-frecuencia">Observaciones <span class="color-red">*</span></label>
                             <textarea required name="observacion" id="observacion" cols="30" rows="5" class="form-control"><?= (isset($data["observacion"])) ? $data["observacion"] : "" ?></textarea>
