@@ -77,13 +77,13 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-4 col-sm-12 mb-4">
+                    <div class="col-md-6 col-sm-12 mb-4">
                         <div class="form-outline">
                             <label class="form-label" for="edema_minf">Edema MINF <span class="color-red">*</span></label>
                             <input required type="text" id="edema_minf" name="edema_minf" class="form-control" value="<?= (isset($data["edema_minf"])) ? $data["edema_minf"] : "" ?>" />
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-12 mb-4">
+                    <div class="col-md-6 col-sm-12 mb-4">
                         <div class="form-outline">
                             <label class="form-label" for="conciencia">Estado de conciencia <span class="color-red">*</span></label>
                             <select required class="select form-control" id="conciencia" name="conciencia" required>
@@ -100,7 +100,10 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-12 mb-4">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 mb-4">
                         <div class="form-outline">
                             <label class="form-label" for="dx">Dx <span class="color-red">*</span></label>
                             <select required class="select form-control" id="dx" name="dx" required>

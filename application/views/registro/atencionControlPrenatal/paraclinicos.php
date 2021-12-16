@@ -15,7 +15,7 @@
                                     if($tipo_paraclinicos){
                                         foreach ($tipo_paraclinicos as $p) {
                                 ?>
-                                            <option <?= (isset($data["tipo"]) && $data["tipo"] == $p["codigo"]) ? "selected" : "" ?> value="<?= $p["codigo"] ?>"><?= $p["nombre"] ?></option>
+                                            <option <?= (isset($data["tipo"]) && $data["tipo"] == $p["codigo"]) ? "selected" : "" ?> value="<?= $p["codigo"] ?>"><?= $p["descripcion"] ?></option>
                                 <?php
                                         }
                                     }

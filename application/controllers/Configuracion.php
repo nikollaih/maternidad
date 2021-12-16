@@ -37,12 +37,17 @@ class Configuracion extends Application_Controller {
 		
 	}
 
-	public function listar($index){
+	public function listar($index, $codigo = null){
 		$params['title'] = 'Configuracion';
         $params['subtitle'] = $this->menuConfig[$index]['nombre'];
 		$params['tableName'] = $this->menuConfig[$index]['tabla'];
 		$params['url'] = $index;
         $params['datos'] = $this->Configuracion_Model->get($this->menuConfig[$index]['tabla']);
+
+		if($codigo != null){
+			$exist = $this->Configuracion_Model->find($codigo, $this->menuConfig[$index]['tabla']);
+			$params["data"] = (is_array($exist)) ? $exist[0] : [];
+		}
 
         $this->load_layout('configuracion/configuraciones', $params);
 	}
@@ -54,14 +59,17 @@ class Configuracion extends Application_Controller {
         $this->load_layout('configuracion/paraclinicos', $params);
 	}
 	
-	public function insertar(){
+	public function insertar($modify = "0"){
 		$info = $this->input->post();
 		$tableName = $info['tableName'];
 		$url = $info['url'];
 		unset($info['tableName'], $info['url']);
 		$exist = $this->Configuracion_Model->find($info['codigo'], $tableName);
-		if (!$exist) {
+		if (!$exist && $modify == "0") {
 			$this->Configuracion_Model->create($info, $tableName);
+		}
+		else if($exist && $modify == "1"){
+			$this->Configuracion_Model->update($info, $tableName);
 		}
 		
 		header('Location: '.base_url().'Configuracion/listar/'.$url);
