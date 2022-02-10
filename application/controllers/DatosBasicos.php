@@ -77,14 +77,56 @@ class DatosBasicos extends Application_Controller {
                 $data = $this->input->post();
                 $params["message"] = $this->guardarPersonales($data);
             }
-
+            
+            $alertas = $this->Configuracion_Model->get('cfg_alertas');
             $form_params['id_paciente'] = $paciente;
             $form_params['tipo_doc'] = $this->Configuracion_Model->get('cfg_tipodoc');
             $form_params['sexos'] = $this->Configuracion_Model->get('cfg_sexo');
             $form_params['generos'] = $this->Configuracion_Model->get('cfg_genero');
             $form_params['info_paciente'] = $this->Pacientes_Model->getPersonal($paciente);
+            $datosAlertas = $this->Pacientes_Model->getAlertas($paciente);
             $params['formulario'] = $this->load->view('registro/datosBasicos/datos_personales', $form_params, TRUE);
             $params['info_perfil'] = $this->Pacientes_Model->getProfile($paciente);
+            
+            $params['showAlertas'] = [];
+            foreach ($alertas as $alerta) {
+                switch ($alerta['parametro']) {
+                    case 'MENOR':
+                        if($datosAlertas[$alerta['campo']] < (int)$alerta['valor']){
+                            array_push($params['showAlertas'],$alerta['descripcion']);
+                        }
+                        break;
+                    case 'CONDICION':
+                        if($datosAlertas[$alerta['campo']]){
+                            array_push($params['showAlertas'],$alerta['descripcion']);
+                        }
+                        break;
+                    case 'MAYOR':
+                        if($datosAlertas[$alerta['campo']] > (int)$alerta['valor']){
+                            array_push($params['showAlertas'],$alerta['descripcion']);
+                        }
+                        break;
+                    case 'MENOR_IGUAL':
+                        if($datosAlertas[$alerta['campo']] <= (int)$alerta['valor']){
+                            array_push($params['showAlertas'],$alerta['descripcion']);
+                        }
+                        break;
+                    case 'IGUAL':
+                        if($datosAlertas[$alerta['campo']] === (int)$alerta['valor']){
+                            array_push($params['showAlertas'],$alerta['descripcion']);
+                        }
+                        break;
+                    case 'MAYOR_IGUAL':
+                        if($datosAlertas[$alerta['campo']] >= (int)$alerta['valor']){
+                            array_push($params['showAlertas'],$alerta['descripcion']);
+                        }
+                        break;
+                }
+                
+            }
+            if (!empty($params['showAlertas'])) {
+                addRequestAdit($paciente, 'Alertas');
+            }
             $this->load_layout('registro/datosBasicos/template', $params);
         }
         else{

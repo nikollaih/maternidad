@@ -29,6 +29,23 @@
             <?php
                }
             ?>
+            <?php
+               if(!empty($showAlertas)){
+            ?>
+               <div class="alert alert-warning fade show" role="alert">
+                  <ul style="margin-bottom: 0;">
+                  <?php
+                     foreach ($showAlertas as $alert) {
+                  ?>
+                     <li><?=$alert?></li>
+                  <?php
+                     }
+                  ?>
+                  </ul>
+               </div>
+            <?php
+               }
+            ?>
             <div>
                <div id="personales">
                   <?= $formulario ?>
