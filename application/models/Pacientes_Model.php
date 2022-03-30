@@ -28,17 +28,12 @@ Class Pacientes_Model extends CI_Model {
             $return = array(
                 'id' => $result[0]['id'],
                 'nombre' => $result[0]['nombres'].' '.$result[0]['apellidos'],
-                'edad' => $this->calcularEdad($result[0]['fecha_nac']),
+                'edad' => calcularEdad($result[0]['fecha_nac']),
                 'estado' => $result[0]['estado'],
                 'eps' => $result[0]['eps']
             );
         }
         return $return;
-    }
-    public function calcularEdad($fecha_nac) {
-        $fecha_nacimiento = new DateTime($fecha_nac);
-        $hoy = new DateTime();
-        return $hoy->diff($fecha_nacimiento)->y;
     }
 
     public function getPersonal($data) {
@@ -74,6 +69,24 @@ Class Pacientes_Model extends CI_Model {
 
     public function crear($data) {
         return $this->db->insert('datos_basicos', $data);
+    }
+
+    public function getAlertas($data) {
+        $this->db->select('d.id, d.fecha_nac, count(s.id_sustancias_psicoactivas) as sustancias');
+        $this->db->from('datos_basicos d');
+        $this->db->join('sustancias_psicoactivas s', 's.id_paciente = d.id');
+        $this->db->where('d.id', $data);
+        $result = $this->db->get();
+        $return = null;
+        if ($result->num_rows() > 0) {
+            $result = $result->result_array();
+            $return = array(
+                'id' => $result[0]['id'],
+                'edad' => calcularEdad($result[0]['fecha_nac']),
+                'sustancias' => $result[0]['sustancias']
+            );
+        }
+        return $return;
     }
 }
 ?>

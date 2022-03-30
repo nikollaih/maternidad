@@ -8,6 +8,7 @@ Class Configuracion_Model extends CI_Model {
     // Get the complete items listing
     public function get($tableName){
         $this->db->from($tableName);
+        $this->db->where("estado", 1);
         $result = $this->db->get();
         return ($result->num_rows() > 0) ? $result->result_array() : false;
     }
@@ -24,16 +25,16 @@ Class Configuracion_Model extends CI_Model {
         return ($result->num_rows() > 0) ? $result->result_array() : false;
     }
     // Update an specific type
-    public function update($data){
+    public function update($data, $tableName){
         $this->db->where('codigo', $data['codigo']);
-        $this->db->update('cfg_tipodoc', $data);
-        return $this->get("cfg_tipodoc");
+        $this->db->update($tableName, $data);
+        return $this->get($tableName);
     }
 
     // Delete a document type
     public function delete($code, $tableName){
         $this->db->where('codigo', $code);
-        return $this->db->delete($tableName);
+        return $this->db->update($tableName, array("estado" => 0));
     }
 }
 ?>

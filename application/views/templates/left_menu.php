@@ -58,7 +58,7 @@
                             <a href="<?= base_url() ?>Configuracion/listar/0" data-key="t-login">Discapacidades</a>
                         </li>
                         <li>
-                            <a href="<?= base_url() ?>Configuracion/listar/21" data-key="t-login">Dx</a>
+                            <a href="<?= base_url() ?>Configuracion/listar/21" data-key="t-login">Diagnóstico</a>
                         </li>
                         <li>
                             <a href="<?= base_url() ?>Configuracion/listar/1" data-key="t-login">Eps</a>
@@ -127,6 +127,20 @@
                         <i class="fas fa-chart-pie"></i>
                         <span data-key="t-dashboard">Estadisticas</span>
                     </a>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow" aria-expanded="true">
+                        <i class="fas fa-users"></i>
+                        <span data-key="t-authentication">Usuarios</span>
+                    </a>
+                    <ul class="sub-menu mm-collapse" aria-expanded="false" style="">
+                        <li>
+                            <a href="<?= base_url() ?>Usuarios/agregar" data-key="t-login">Nuevo</a>
+                        </li>
+                        <li>
+                            <a href="<?= base_url() ?>Usuarios" data-key="t-login">Lista</a>
+                        </li>
+                    </ul>
                 </li>
                 <!-- Invitados -->
             </ul>
