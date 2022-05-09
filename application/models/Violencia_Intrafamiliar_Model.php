@@ -13,6 +13,13 @@ Class Violencia_intrafamiliar_Model extends CI_Model {
         return ($result->num_rows() > 0) ? $result->result_array() : false;
     }
 
+    public function get_count(){
+        $this->db->from("violencia_intrafamiliar");
+        $this->db->group_by("id_paciente");
+        $result = $this->db->get();
+        return ($result->num_rows() > 0) ? $result->result_array() : false;
+    }
+
      // Get the complete items listing
      public function get($id){
         $this->db->from("violencia_intrafamiliar");

@@ -41,12 +41,12 @@
                                     <td><?= $activas ?></td>
                                 </tr>
                                 <tr>
-                                    <td>Trabajadoras sexuales</td>
-                                    <td><?= $trabajadoras_sexuales ?> (<?= ($trabajadoras_sexuales/$activas) * 100 ?>%)</td>
-                                </tr>
-                                <tr>
                                     <td>Alto riesgo por consumo de SPA</td>
                                     <td><?= $riesgo_spa ?> (<?= round(($riesgo_spa/$activas) * 100 , 1)?> %)</td>
+                                </tr>
+                                <tr>
+                                    <td>Victimas de violencia intrafamiliar</td>
+                                    <td><?= $violencia_intrafamiliar ?> (<?= round(($violencia_intrafamiliar/$activas) * 100 , 1)?> %)</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -75,8 +75,8 @@
             data: {
                 labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
                 datasets: [{
-                    label: 'Madres por municipio',
-                    data: [0,0,1,0,1,0,2,0,0,0,0,0],
+                    label: 'Ingresos por mes',
+                    data: [<?=$ingresos['data']?>],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',

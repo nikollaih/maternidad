@@ -15,6 +15,13 @@ Class Pacientes_Model extends CI_Model {
         return ($result->num_rows() > 0) ? $result->result_array() : false;
     }
 
+    public function getAll(){
+        $this->db->from('datos_basicos d');
+        $this->db->order_by('d.nombres', 'ASC');
+        $result = $this->db->get();
+        return ($result->num_rows() > 0) ? $result->result_array() : false;
+    }
+
     public function getProfile($data) {
         $this->db->select('d.id, d.nombres, d.apellidos, d.fecha_nac, s.descripcion as estado, e.descripcion as eps');
         $this->db->from('datos_basicos d');
