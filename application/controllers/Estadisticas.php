@@ -42,7 +42,7 @@ class Estadisticas extends Application_Controller {
 
         $params['activas'] = count($this->Pacientes_Model->getAll());
         $params['riesgo_spa'] = count($this->Sustancias_Psicoactivas_Model->get_count());
-		$params['violencia_intrafamiliar'] = count($this->Violencia_intrafamiliar_Model->get_count());
+		$params['violencia_intrafamiliar'] = count($this->Violencia_Intrafamiliar_Model->get_count());
 		$this->load_layout('estadisticas/index', $params);
 	}
 }
