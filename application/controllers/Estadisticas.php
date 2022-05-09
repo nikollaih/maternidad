@@ -15,7 +15,6 @@ class Estadisticas extends Application_Controller {
 
 		$ingresos = $this->Estadisticas_Model->getMadresPorMes();
 		$temp_ingresos_data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-		print_r($ingresos);
 		$params["ingresos"]["data"] = "";
 		if($ingresos){
 			for ($i=0; $i < count($ingresos); $i++) { 
