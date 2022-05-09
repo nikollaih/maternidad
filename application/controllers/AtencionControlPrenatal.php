@@ -6,7 +6,7 @@ class AtencionControlPrenatal extends Application_Controller {
 	{
 		parent::__construct();
 		$this->load->helper(["url"]);
-        $this->load->model(["Formula_Obstetrica_Model", "Sustancias_Psicoactivas_Model", "Configuracion_Model", "Vacunacion_Model", "Riesgo_Model", "Paraclinicos_Model", "Mensuales_Model", "Control_Prenatal_Model", "Otras_Consultas_Model", "Pacientes_Model"]);
+        $this->load->model(["Violencia_Intrafamiliar_Model", "Formula_Obstetrica_Model", "Sustancias_Psicoactivas_Model", "Configuracion_Model", "Vacunacion_Model", "Riesgo_Model", "Paraclinicos_Model", "Mensuales_Model", "Control_Prenatal_Model", "Otras_Consultas_Model", "Pacientes_Model"]);
         $this->load->library(['Form_validation']);
 	}
 
@@ -663,6 +663,95 @@ class AtencionControlPrenatal extends Application_Controller {
             }
             else{
                 json_response(null, false, "No se ha encontrado el riesgo");
+            }
+        }
+        else{
+            json_response(null, false, "No es posible realizar esta acción");
+        }
+    }
+
+
+    /* ========================================================================
+    ========================= VIOLENCIA INTRAFAMILIAR ==========================
+    ===========================================================================*/
+
+    function violenciaIntrafamiliar($paciente){
+        if($paciente){
+            $params["title"] = "Atencion Control Prenatal";
+            $params["subtitle"] = "Violencia intrafamiliar";
+
+            if($this->input->post()){
+                $data = $this->input->post();
+                $params["message"] = $this->save_violencia_intrafamiliar($data);
+                if(!$params["message"]["success"]){
+                    $form_params["data"] = $this->input->post();
+                }
+            }
+
+            $form_params["id_paciente"] = $paciente;
+            $form_params["violencia_intrafamiliar"] = $this->Violencia_Intrafamiliar_Model->get_all($paciente);
+            $params["formulario"] = $this->load->view("registro/atencionControlPrenatal/violencia_intrafamiliar", $form_params, TRUE);
+            $params['info_perfil'] = $this->Pacientes_Model->getProfile($paciente);
+            $this->load_layout("registro/atencionControlPrenatal/template", $params);
+        }
+        else{
+            header('Location: '.base_url());
+        }
+    }
+
+    function save_violencia_intrafamiliar($data){
+        $this->form_validation->set_rules('antibiotico', 'Antibioticos', 'required');
+        $this->form_validation->set_rules('antiretrovirales', 'Antiretrovirales', 'required');
+        $this->form_validation->set_rules('remision_ive', 'Remisión para IVE', 'required');
+        $this->form_validation->set_rules('toma_rapida_vih', 'Toma rápida de VIH', 'required');
+        $this->form_validation->set_rules('toma_rapida_hb', 'Toma rápida de HB', 'required');
+        $this->form_validation->set_rules('toma_rapida_hc', 'Toma rápida de HC', 'required');
+        $this->form_validation->set_rules('toma_rapida_sifilis', 'Toma rápida de sifilis', 'required');
+        $this->form_validation->set_rules('cadena_de_custodia', 'Se realiza cadena de custodia', 'required');
+        $this->form_validation->set_rules('derechos_de_victimas', 'Se nombran los derechos de las victimas', 'required');
+        $this->form_validation->set_rules('ruta_con_entidades_territoriales', 'Se activan las rutas con las entidades territoriales', 'required');
+        $this->form_validation->set_rules('notificacion_sivigila', 'Se notifica en SIVIGILA', 'required');
+
+        // Check if input rules are ok
+        if ($this->form_validation->run() == false) {
+            $return = array("type" => "danger", "message" => "Por favor complete todos los campos.", "success" => false);
+        }
+        else{
+            if($data["id_paciente"]){
+                $data["created_at"] = date("Y-m-d h:i:s"); 
+                if($this->Violencia_Intrafamiliar_Model->create($data)){
+                    $return = array("type" => "success", "message" => "Datos guardados satisfactoriamente.", "success" => true);
+                }
+                else{
+                    $return = array("type" => "danger", "message" => "Ha ocurrido un error, por favor itente de nuevo más tarde.", "success" => false);
+                }
+            }
+            else{
+                $return = array("type" => "danger", "message" => "No se ha seleccionado un paciente.", "success" => false);
+            }
+        }
+        return $return;
+    }
+
+    function delete_violencia_intrafamiliar(){
+        if($this->input->post()){
+            $id = $this->input->post("id");
+            if($id){
+                $formula = $this->Violencia_Intrafamiliar_Model->get($id);
+                if($formula){
+                    if($this->Violencia_Intrafamiliar_Model->delete($id)){
+                        json_response(null, true, "Registro eliminado exitosamente");
+                    }
+                    else{
+                        json_response(null, false, "No se ha podido eliminar el registro");
+                    }
+                }
+                else{
+                    json_response(null, false, "No se ha encontrado el registro");
+                }
+            }
+            else{
+                json_response(null, false, "No se ha encontrado el registro");
             }
         }
         else{

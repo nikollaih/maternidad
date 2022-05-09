@@ -37,6 +37,7 @@
                     <a class="dropdown-item" href="<?= base_url() ?>AtencionControlPrenatal/riesgos/<?= $id ?>">Riesgos</a>
                     <a class="dropdown-item" href="<?= base_url() ?>AtencionControlPrenatal/sustanciasPsicoactivas/<?= $id ?>">Sustancias Psicoactivas</a>
                     <a class="dropdown-item" href="<?= base_url() ?>AtencionControlPrenatal/vacunacion/<?= $id ?>">Vacunacion</a>
+                    <a class="dropdown-item" href="<?= base_url() ?>AtencionControlPrenatal/violenciaIntrafamiliar/<?= $id ?>">Violencia Intrafamiliar</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
