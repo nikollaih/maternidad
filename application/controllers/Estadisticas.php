@@ -6,7 +6,7 @@ class Estadisticas extends Application_Controller {
 	{
 		parent::__construct();
 		$this->load->helper(['url']);
-		$this->load->model(['Estadisticas_Model', 'Pacientes_Model', 'Sustancias_Psicoactivas_Model', 'Violencia_intrafamiliar_Model']);
+		$this->load->model(['Estadisticas_Model', 'Pacientes_Model', 'Sustancias_Psicoactivas_Model', 'Violencia_Intrafamiliar_Model']);
 	}
 
 	public function index(){
