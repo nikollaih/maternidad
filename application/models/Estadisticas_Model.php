@@ -13,5 +13,16 @@ Class Estadisticas_Model extends CI_Model {
         $result = $this->db->get();
         return ($result->num_rows() > 0) ? $result->result_array() : false;
     }
+
+    public function getMadresPorMes($anio = null){
+        if($anio == null)
+            $anio = date("Y");
+        $this->db->select('COUNT(id) AS cantidad, MONTH(created_at) as mes, YEAR(created_at) as anio');
+        $this->db->from('datos_basicos');
+        $this->db->where("YEAR(created_at)", $anio);
+        $this->db->group_by('YEAR(created_at), MONTH(created_at)');
+        $result = $this->db->get();
+        return ($result->num_rows() > 0) ? $result->result_array() : false;
+    }
 }
 ?>

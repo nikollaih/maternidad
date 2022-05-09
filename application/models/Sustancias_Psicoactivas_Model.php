@@ -6,6 +6,14 @@ Class Sustancias_Psicoactivas_Model extends CI_Model {
     }
 
     // Get the complete items listing
+    public function get_count(){
+        $this->db->select("sp.*");
+        $this->db->from("sustancias_psicoactivas sp");
+        $this->db->group_by("id_paciente");
+        $result = $this->db->get();
+        return ($result->num_rows() > 0) ? $result->result_array() : false;
+    }
+
     public function get_all($paciente){
         $this->db->select("sp.id_sustancias_psicoactivas, sp.fecha_ultimo_consumo, sp.created_at, ct.descripcion as sustancia, cf.descripcion as frecuencia");
         $this->db->from("sustancias_psicoactivas sp");
