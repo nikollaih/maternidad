@@ -35,7 +35,7 @@
                   <div class="col-md-12 mb-4">
                         <div class="form-outline">
                             <label class="form-label" for="dx">Dx <span class="color-red">*</span></label>
-                            <select required required class="select form-control" id="dx" name="dx" required>
+                            <select required required class="select form-control searchable-select" id="dx" name="dx" required>
                                 <option value="">-- Seleccionar</option>
                                 <?php
                                     if($tipo_dx){

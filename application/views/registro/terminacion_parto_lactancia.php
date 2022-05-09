@@ -111,13 +111,13 @@
                         <div class="row align-items-end mb-4">
                            <div class="col">
                               <div class="form-outline">
-                                 <label class="form-label" for="form6Example1">Apagar a los 5 minutos</label>
+                                 <label class="form-label" for="form6Example1">Apgar a los 5 minutos</label>
                                  <input type="text" id="form6Example1" class="form-control" />
                               </div>
                            </div>
                            <div class="col">
                               <div class="form-outline">
-                                 <label class="form-label" for="form6Example1">Apagar a los 10 minutos</label>
+                                 <label class="form-label" for="form6Example1">Apgar a los 10 minutos</label>
                                  <input type="text" id="form6Example1" class="form-control" />
                               </div>
                            </div>

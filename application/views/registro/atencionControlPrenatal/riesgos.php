@@ -26,13 +26,13 @@
                     <div class="col-md-4 col-sm-12 mb-4">
                         <div class="form-outline">
                             <label class="form-label" for="fum">FUM <span class="color-red">*</span></label>
-                            <input required type="text" id="fum" name="fum" class="form-control" value="<?= (isset($data["fum"])) ? $data["fum"] : "" ?>" />
+                            <input required type="date" id="fum" name="fum" class="form-control input-fum" value="<?= (isset($data["fum"])) ? $data["fum"] : "" ?>" />
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12 mb-4">
                         <div class="form-outline">
                             <label class="form-label" for="fpp">FPP <span class="color-red">*</span></label>
-                            <input required type="text" id="fpp" name="fpp" class="form-control" value="<?= (isset($data["fpp"])) ? $data["fpp"] : "" ?>" />
+                            <input required readonly type="date" id="fpp" name="fpp" class="form-control" value="<?= (isset($data["fpp"])) ? $data["fpp"] : "" ?>" />
                         </div>
                     </div>
                 </div>
@@ -40,19 +40,19 @@
                     <div class="col-md-4 col-sm-12 mb-4">
                         <div class="form-outline">
                             <label class="form-label" for="dias_parto">Días para el parto <span class="color-red">*</span></label>
-                            <input required type="number" id="dias_parto" name="dias_parto" class="form-control" value="<?= (isset($data["dias_parto"])) ? $data["dias_parto"] : "" ?>" />
+                            <input required readonly type="number" id="dias_parto" name="dias_parto" class="form-control" value="<?= (isset($data["dias_parto"])) ? $data["dias_parto"] : "" ?>" />
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12 mb-4">
                         <div class="form-outline">
                             <label class="form-label" for="edad_gestacional">Edad gestacional <span class="color-red">*</span></label>
-                            <input required type="text" id="edad_gestacional" name="edad_gestacional" class="form-control" value="<?= (isset($data["edad_gestacional"])) ? $data["edad_gestacional"] : "" ?>" />
+                            <input required readonly type="text" id="edad_gestacional" name="edad_gestacional" class="form-control" value="<?= (isset($data["edad_gestacional"])) ? $data["edad_gestacional"] : "" ?>" />
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12 mb-4">
                         <div class="form-outline">
                             <label class="form-label" for="alarma_parto">Alarma - PARTO <span class="color-red">*</span></label>
-                            <input required type="text" id="alarma_parto" name="alarma_parto" class="form-control" value="<?= (isset($data["alarma_parto"])) ? $data["alarma_parto"] : "" ?>" />
+                            <input required readonly type="text" id="alarma_parto" name="alarma_parto" class="form-control" value="<?= (isset($data["alarma_parto"])) ? $data["alarma_parto"] : "" ?>" />
                         </div>
                     </div>
                 </div>
@@ -90,8 +90,8 @@
                   ?>
                         <tr>
                            <td><?= $riesgo["riesgo"] ?></td>
-                           <td><?= $riesgo["fum"] ?></td>
-                           <td><?= $riesgo["fpp"] ?></td>
+                           <td><?= date("Y-m-d", strtotime($riesgo["fum"])) ?></td>
+                           <td><?= date("Y-m-d", strtotime($riesgo["fpp"])) ?></td>
                            <td><?= $riesgo["dias_parto"] ?></td>
                            <td><?= $riesgo["edad_gestacional"] ?></td>
                            <td><?= $riesgo["alarma_parto"] ?></td>
