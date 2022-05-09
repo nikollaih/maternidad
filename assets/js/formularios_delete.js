@@ -38,6 +38,11 @@ jQuery(document).on("click", ".delete-riesgo", function() {
     delete_row(id, "AtencionControlPrenatal/delete_riesgo", 'El riesgo será eliminada!');
 });
 
+jQuery(document).on("click", ".delete-violencia-intrafamiliar", function() {
+    let id = jQuery(this).attr("data-id");
+    delete_row(id, "AtencionControlPrenatal/delete_violencia_intrafamiliar", 'El registro será eliminado!');
+});
+
 jQuery(document).on("click", ".delete-paraclinico-preconcepcional", function() {
     let id = jQuery(this).attr("data-id");
     delete_row(id, "ConsultaPreconcepcional/delete_paraclinico", 'El paraclinico será eliminada!');

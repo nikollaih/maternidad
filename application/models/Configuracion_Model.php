@@ -8,6 +8,7 @@ Class Configuracion_Model extends CI_Model {
     // Get the complete items listing
     public function get($tableName){
         $this->db->from($tableName);
+        $this->db->order_by("descripcion", "asc");
         $this->db->where("estado", 1);
         $result = $this->db->get();
         return ($result->num_rows() > 0) ? $result->result_array() : false;
