@@ -15,6 +15,17 @@ Class Riesgo_Model extends CI_Model {
         return ($result->num_rows() > 0) ? $result->result_array() : false;
     }
 
+    public function get_last($paciente){
+        $this->db->select("r.*, cr.descripcion as riesgo");
+        $this->db->from("riesgo r");
+        $this->db->join("cfg_riesgo cr", "r.codigo_riesgo = cr.codigo", "left outer");
+        $this->db->where("id_paciente", $paciente);
+        $this->db->order_by("r.created_at", "DESC");
+        $this->db->limit(1);
+        $result = $this->db->get();
+        return ($result->num_rows() > 0) ? $result->row_array() : false;
+    }
+
      // Get the complete items listing
      public function get($id){
         $this->db->from("riesgo");

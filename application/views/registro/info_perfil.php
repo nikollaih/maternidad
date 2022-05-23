@@ -22,9 +22,12 @@
                 </div>
                 <div class="col-sm-auto order-1 order-sm-2">
                     <div class="d-flex align-items-start justify-content-end gap-2">
-                    <div>
-                        <span class="tag"><?=$info_perfil['eps']?></span>
-                    </div>
+                        <div>
+                            <span class="tag"><?=$info_perfil['eps']?></span>
+                        </div>
+                        <div>
+                            <span class="tag">Parto: <?= (ultimo_riesgo($info_perfil["id"])) ? ultimo_riesgo($info_perfil["id"])["alarma_parto"] : "N/D" ?></span>
+                        </div>
                     </div>
                 </div>
             </div>

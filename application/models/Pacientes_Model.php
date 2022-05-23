@@ -10,7 +10,7 @@ Class Pacientes_Model extends CI_Model {
         $this->db->like('d.numero_documento', $pattern, 'after'); 
         $this->db->or_like('d.nombres', $pattern, 'after'); 
         $this->db->or_like('d.apellidos', $pattern, 'after'); 
-        $this->db->order_by('d.numero_documento', 'ASC');
+        $this->db->order_by('d.nombres', 'ASC');
         $result = $this->db->get();
         return ($result->num_rows() > 0) ? $result->result_array() : false;
     }
@@ -96,6 +96,19 @@ Class Pacientes_Model extends CI_Model {
             );
         }
         return $return;
+    }
+
+    public function getBetweenDates($start_date = null, $end_date = null){
+        $this->db->from('datos_basicos d');
+        if($start_date != null){
+            $this->db->where('d.fecha_nac >=', $start_date);
+        }
+        if($end_date != null){
+            $this->db->where('d.fecha_nac <=', $end_date);
+        }
+        $this->db->order_by('d.id', 'ASC');
+        $result = $this->db->get();
+        return ($result->num_rows() > 0) ? $result->result_array() : false;
     }
 }
 ?>

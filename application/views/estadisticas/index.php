@@ -37,15 +37,31 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Gestantes Activas</td>
-                                    <td><?= $activas ?></td>
+                                    <td>Total de gestantes activas</td>
+                                    <td><?= $activas ?> </td>
+                                </tr>
+                                <tr>
+                                    <td>Gestantes de 10 a 14 años</td>
+                                    <td><?= $_10_14 ?> (<?= round(($_10_14/$activas) * 100 , 1)?> %)</td>
+                                </tr>
+                                <tr>
+                                    <td>Gestantes de 15 a 19 años</td>
+                                    <td><?= $_15_19 ?> (<?= round(($_15_19/$activas) * 100 , 1)?> %)</td>
+                                </tr>
+                                <tr>
+                                    <td>Gestantes de 20 a 34 años</td>
+                                    <td><?= $_20_34 ?> (<?= round(($_20_34/$activas) * 100 , 1)?> %)</td>
+                                </tr>
+                                <tr>
+                                    <td>Gestantes mayores de 35 años</td>
+                                    <td><?= $_35 ?> (<?= round(($_35/$activas) * 100 , 1)?> %)</td>
                                 </tr>
                                 <tr>
                                     <td>Alto riesgo por consumo de SPA</td>
                                     <td><?= $riesgo_spa ?> (<?= round(($riesgo_spa/$activas) * 100 , 1)?> %)</td>
                                 </tr>
                                 <tr>
-                                    <td>Victimas de violencia intrafamiliar</td>
+                                    <td>Victimas de violencia sexual y de género</td>
                                     <td><?= $violencia_intrafamiliar ?> (<?= round(($violencia_intrafamiliar/$activas) * 100 , 1)?> %)</td>
                                 </tr>
                             </tbody>
