@@ -23,7 +23,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = "http://".$_SERVER["HTTP_HOST"]."/maternidad";
+if($_SERVER['HTTP_HOST'] == 'localhost:8888' || $_SERVER['HTTP_HOST'] == 'localhost'){
+	$config['base_url'] = "http://".$_SERVER['HTTP_HOST']."/maternidad";
+}else{
+	$config['base_url'] = "https://".$_SERVER['HTTP_HOST'];
+}
 
 /*
 |--------------------------------------------------------------------------
