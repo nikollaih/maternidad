@@ -177,8 +177,8 @@
                            <td><?= $mensual["fcf"] ?></td>
                            <td><?= $mensual["imc"] ?></td>
                            <td><?= $mensual["edema_minf"] ?></td>
-                           <td><?= $mensual["conciencia"] ?></td>
-                           <td><?= $mensual["dx"] ?></td>
+                           <td><?= $mensual["ec_descripcion"] ?></td>
+                           <td><?= $mensual["dx_descripcion"] ?></td>
                            <td><?= $mensual["observacion"] ?></td>
                            <td><?= date("d M, Y", strtotime($mensual["fecha"])) ?></td>
                            <td class="text-center"><button data-id="<?= $mensual["id_mensuales"] ?>" class="btn btn-sm btn-danger delete-control-mensual">Eliminar</button></td>

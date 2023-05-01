@@ -81,8 +81,8 @@ Class Pacientes_Model extends CI_Model {
     public function getAlertas($data) {
         $this->db->select('d.id, d.fecha_nac, count(s.id_sustancias_psicoactivas) as sustancias, count(vi.id_violencia_intrafamiliar) as violencia');
         $this->db->from('datos_basicos d');
-        $this->db->join('sustancias_psicoactivas s', 's.id_paciente = d.id');
-        $this->db->join('violencia_intrafamiliar vi', 'vi.id_paciente = d.id');
+        $this->db->join('sustancias_psicoactivas s', 's.id_paciente = d.id', "left outer");
+        $this->db->join('violencia_intrafamiliar vi', 'vi.id_paciente = d.id', "left outer");
         $this->db->where('d.id', $data);
         $result = $this->db->get();
         $return = null;

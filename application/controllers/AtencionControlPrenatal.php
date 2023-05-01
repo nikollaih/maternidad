@@ -527,7 +527,7 @@ class AtencionControlPrenatal extends Application_Controller {
 
             $form_params["id_paciente"] = $paciente;
             $form_params["otras_consultas"] = $this->Otras_Consultas_Model->get_all($paciente);
-            $form_params["tipo_consultas"] = $this->Configuracion_Model->get("cfg_interconsulta");
+            $form_params["tipo_consultas"] = $this->Configuracion_Model->get("cfg_otras_consultas");
             $form_params["tipo_dx"] = $this->Configuracion_Model->get("cfg_dx");
             $params["formulario"] = $this->load->view("registro/atencionControlPrenatal/otras_consultas", $form_params, TRUE);
             $params['info_perfil'] = $this->Pacientes_Model->getProfile($paciente);

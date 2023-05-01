@@ -54,9 +54,14 @@ class Estadisticas extends Application_Controller {
 		$params["_15_19"] = ($_15_19) ? count($_15_19) : 0;
 		$params["_20_34"] = ($_20_34) ? count($_20_34) : 0;
 		$params["_35"] = ($_35) ? count($_35) : 0;
-		$params['activas'] = count($this->Pacientes_Model->getAll());
-        $params['riesgo_spa'] = count($this->Sustancias_Psicoactivas_Model->get_count());
-		$params['violencia_intrafamiliar'] = count($this->Violencia_Intrafamiliar_Model->get_count());
+
+		$activas = $this->Pacientes_Model->getAll();
+		$riesgo_spa = $this->Sustancias_Psicoactivas_Model->get_count();
+		$violencia = $this->Violencia_Intrafamiliar_Model->get_count();
+
+		$params['activas'] = ($activas) ? count($this->Pacientes_Model->getAll()) : 0;
+        $params['riesgo_spa'] = ($riesgo_spa) ? count($this->Sustancias_Psicoactivas_Model->get_count()) : 0;
+		$params['violencia_intrafamiliar'] = ($violencia) ? count($this->Violencia_Intrafamiliar_Model->get_count()) : 0;
 		$this->load_layout('estadisticas/index', $params);
 	}
 }

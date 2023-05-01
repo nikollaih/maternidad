@@ -91,7 +91,7 @@
                   ?>
                         <tr>
                            <td><?= $oc["consulta"] ?></td>
-                           <td><?= $oc["dx"] ?></td>
+                           <td><?= $oc["dx_descripcion"] ?></td>
                            <td><?= $oc["observacion"] ?></td>
                            <td><?= date("d M, Y", strtotime($oc["fecha_consulta"])) ?></td>
                            <td class="text-center"><button data-id="<?= $oc["id_otras_consultas"] ?>" class="btn btn-sm btn-danger delete-otras-consultas">Eliminar</button></td>

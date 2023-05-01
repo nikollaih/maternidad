@@ -7,8 +7,11 @@ Class Mensuales_Model extends CI_Model {
 
     // Get the complete items listing
     public function get_all($paciente){
-        $this->db->from("mensuales");
-        $this->db->where("id_paciente", $paciente);
+        $this->db->select("m.*, cdx.descripcion as dx_descripcion, cec.descripcion as ec_descripcion");
+        $this->db->from("mensuales m");
+        $this->db->join("cfg_dx cdx", "m.dx = cdx.codigo");
+        $this->db->join("cfg_estado_conciencia cec", "m.conciencia = cec.codigo");
+        $this->db->where("m.id_paciente", $paciente);
         $result = $this->db->get();
         return ($result->num_rows() > 0) ? $result->result_array() : false;
     }

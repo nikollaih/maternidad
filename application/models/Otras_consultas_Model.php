@@ -7,9 +7,10 @@ Class Otras_Consultas_Model extends CI_Model {
 
     // Get the complete items listing
     public function get_all($paciente){
-        $this->db->select("oc.*, coc.descripcion as consulta");
+        $this->db->select("oc.*, coc.descripcion as consulta, cdx.descripcion as dx_descripcion");
         $this->db->from("otras_consultas oc");
         $this->db->join("cfg_otras_consultas coc", "oc.codigo_consulta = coc.codigo", "left outer");
+        $this->db->join("cfg_dx cdx", "oc.dx = cdx.codigo");
         $this->db->where("id_paciente", $paciente);
         $result = $this->db->get();
         return ($result->num_rows() > 0) ? $result->result_array() : false;

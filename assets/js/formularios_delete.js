@@ -92,7 +92,7 @@ function delete_row(id, url, text) {
                                 showLoaderOnConfirm: true
                             },
                             function() {
-                                location.reload();
+                                window.location = "";
                             })
                     } else {
                         swal({

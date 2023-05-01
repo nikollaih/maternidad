@@ -37,7 +37,8 @@ Class Paraclinicos_Model extends CI_Model {
     // Delete a document type
     public function delete($id){
         $this->db->where('id_paraclinicos', $id);
-        return $this->db->delete("paraclinicos");
+        $query = $this->db->delete("paraclinicos");
+        return $query;
     }
 }
 ?>

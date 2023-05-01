@@ -38,6 +38,7 @@
                               <label class="form-label" for="tipodoc">Tipo de documento <span class="color-red">*</span></label>
                               <select required class="select form-control" id="tipodoc" name="tipodoc">
                                     <?php
+                                    if($tipo_doc){
                                        for ($i=0; $i < count($tipo_doc); $i++) { 
                                     ?>
                                     <option value="<?=$tipo_doc[$i]['codigo']?>">
@@ -45,6 +46,7 @@
                                     </option>
                                     <?php
                                        }
+                                    }
                                     ?>
                               </select>
                            </div>
@@ -77,6 +79,7 @@
                               <label class="form-label" for="sexo">Sexo <span class="color-red">*</span></label>
                               <select required class="select form-control" id="sexo" name="sexo">
                                     <?php
+                                    if($sexos){
                                        for ($i=0; $i < count($sexos); $i++) { 
                                     ?>
                                     <option value="<?=$sexos[$i]['codigo']?>">
@@ -84,6 +87,7 @@
                                     </option>
                                     <?php
                                        }
+                                    }
                                     ?>
                               </select>
                            </div>
@@ -93,6 +97,7 @@
                               <label class="form-label" for="genero">Genero <span class="color-red">*</span></label>
                               <select required class="select form-control" id="genero" name="genero">
                                     <?php
+                                    if($generos){
                                        for ($i=0; $i < count($generos); $i++) { 
                                     ?>
                                     <option value="<?=$generos[$i]['codigo']?>">
@@ -100,6 +105,7 @@
                                     </option>
                                     <?php
                                        }
+                                    }
                                     ?>
                               </select>
                            </div>
@@ -135,6 +141,7 @@
                                     <label class="form-label" for="mpio">Municipio <span class="color-red">*</span></label>
                                     <select required class="select form-control" id="mpio" name="mpio">
                                     <?php
+                                    if($mpios){
                                        for ($i=0; $i < count($mpios); $i++) { 
                                     ?>
                                        <option value="<?=$mpios[$i]['codigo']?>">
@@ -142,6 +149,7 @@
                                        </option>
                                     <?php
                                        }  
+                                    }
                                     ?> 
                                     </select>
                               </div>
@@ -151,6 +159,7 @@
                                     <label class="form-label" for="zona">Zona <span class="color-red">*</span></label>
                                     <select required class="select form-control" id="zona" name="zona">
                                     <?php
+                                    if($zonas){
                                        for ($i=0; $i < count($zonas); $i++) { 
                                     ?>
                                        <option value="<?=$zonas[$i]['codigo']?>">
@@ -158,6 +167,7 @@
                                        </option>
                                     <?php
                                        }  
+                                    }
                                     ?>
                                     </select>
                               </div>
@@ -172,8 +182,9 @@
                            <div class="col">
                               <div class="form-outline">
                                     <label class="form-label" for="poblacion">Tipo de población beneficiaria <span class="color-red">*</span></label>
-                                    <selec  requiredt class="select form-control" id="poblacion" name="poblacion">
+                                    <select  requiredt class="select form-control" id="poblacion" name="poblacion">
                                     <?php
+                                    if($poblaciones){
                                        for ($i=0; $i < count($poblaciones); $i++) { 
                                     ?>
                                     <option value="<?=$poblaciones[$i]['codigo']?>">
@@ -181,6 +192,7 @@
                                     </option>
                                     <?php
                                        }
+                                    }
                                     ?>
                                     </select>
                               </div>
@@ -190,6 +202,7 @@
                                     <label class="form-label" for="discapacidad">Discapacidad <span class="color-red">*</span></label>
                                     <select required class="select form-control" id="discapacidad" name="discapacidad">
                                     <?php
+                                    if($discapacidades){
                                        for ($i=0; $i < count($discapacidades); $i++) { 
                                     ?>
                                     <option value="<?=$discapacidades[$i]['codigo']?>">
@@ -197,6 +210,7 @@
                                     </option>
                                     <?php
                                        }
+                                    }
                                     ?>
                                     </select>
                               </div>
@@ -206,6 +220,7 @@
                                     <label class="form-label" for="etnia">Étnia <span class="color-red">*</span></label>
                                     <select required class="select form-control" id="etnia" name="etnia">
                                     <?php
+                                    if($etnias){
                                        for ($i=0; $i < count($etnias); $i++) { 
                                     ?>
                                     <option value="<?=$etnias[$i]['codigo']?>">
@@ -213,6 +228,7 @@
                                     </option>
                                     <?php
                                        }
+                                    }
                                     ?>
                                     </select>
                               </div>
@@ -224,6 +240,7 @@
                                     <label class="form-label" for="educacion">Nivel educativo <span class="color-red">*</span></label>
                                     <select required class="select form-control" id="educacion" name="educacion">
                                     <?php
+                                    if($nivelesE){
                                        for ($i=0; $i < count($nivelesE); $i++) { 
                                     ?>
                                     <option value="<?=$nivelesE[$i]['codigo']?>">
@@ -231,6 +248,7 @@
                                     </option>
                                     <?php
                                        }
+                                    }
                                     ?>
                                     </select>
                               </div>
@@ -240,6 +258,7 @@
                                     <label class="form-label" for="eps">Eps <span class="color-red">*</span></label>
                                     <select required class="select form-control" id="eps" name="eps">
                                     <?php
+                                    if($eps){
                                        for ($i=0; $i < count($eps); $i++) { 
                                     ?>
                                     <option value="<?=$eps[$i]['codigo']?>">
@@ -247,6 +266,7 @@
                                     </option>
                                     <?php
                                        }
+                                    }
                                     ?>
                                     </select>
                               </div>
@@ -256,6 +276,7 @@
                                     <label class="form-label" for="regimen">Régimen <span class="color-red">*</span></label>
                                     <select required class="select form-control" id="regimen" name="regimen">
                                     <?php
+                                    if($regimenes){
                                        for ($i=0; $i < count($regimenes); $i++) { 
                                     ?>
                                     <option value="<?=$regimenes[$i]['codigo']?>">
@@ -263,6 +284,7 @@
                                     </option>
                                     <?php
                                        }
+                                    }
                                     ?>
                                     </select>
                               </div>

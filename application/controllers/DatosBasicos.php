@@ -87,7 +87,7 @@ class DatosBasicos extends Application_Controller {
             $datosAlertas = $this->Pacientes_Model->getAlertas($paciente);
             $params['formulario'] = $this->load->view('registro/datosBasicos/datos_personales', $form_params, TRUE);
             $params['info_perfil'] = $this->Pacientes_Model->getProfile($paciente);
-            
+
             $params['showAlertas'] = [];
             foreach ($alertas as $alerta) {
                 switch ($alerta['parametro']) {
